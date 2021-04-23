@@ -1,0 +1,1555 @@
+/*
+
+The CSS file for my resume website, built from scratch.
+
+Notes:
+max-screen-width: 2560px
+max-screen-height: 789px
+
+CSS timing function tool: https://matthewlein.com/tools/ceaser
+
+*/
+
+/*
+
+  Main Color Scheme:
+  #eaeaea - white
+  #ff2e63 - red
+  #08d9d6 - green
+  #252a34 - black
+
+  New color scheme:
+  #222831 - Black
+  #393e46 - dark gray
+  #00adb5 - blue
+  #eeeeee - white
+
+*/
+
+/*##################################################*/
+/* Tag Selectors */
+/*##################################################*/
+
+body {  /* Tag Selector */
+  background-color: #eeeeee;  /* Background of website */
+  text-align: center;  /* Aligning all text to the left unless specified  except where necessary */
+  font-family: 'Work Sans', sans-serif;
+  margin: auto;
+  max-width: 1440px;
+}
+
+/*##################################################*/
+/* Mouse Div Selectors */
+/*##################################################*/
+
+.mouseDiv {
+  text-align: left;
+  font-size: 0.7rem;
+  position: absolute;
+  z-index: 10;
+  transition: all 1000ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/*--------------------------------------------*/
+/* mouse div size control */
+/*--------------------------------------------*/
+.mouseDiv-font0 {
+  height: 0;
+} .mouseDiv-fontNorm {
+  height: 100px;
+}
+
+/*##################################################*/
+/* Side Wipe Animation Selectors */
+/*##################################################*/
+
+.sideWipeContainer {
+  overflow: hidden;
+  position: absolute;
+  height: 5px;
+  max-width: inherit;
+  width: 100%;
+  bottom: 0;
+  margin: 0;
+} .sideWipeContainer .sideWipe1 {
+  height: 5px;
+  bottom: 0;
+  width: 25%;
+  position: absolute;
+  margin: 0;
+  background-color: #222831;
+  overflow: hidden;
+  display: inline-block;
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .sideWipeContainer .leftSideWipe {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  left: -27%;
+} .sideWipeContainer .rightSideWipe {
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  left: 126%;
+}
+
+/*##################################################*/
+/* Unique Div: titleNavBarBox */
+/*##################################################*/
+
+.titleBar {
+  padding: 0;
+  overflow: hidden;
+}
+
+/*--------------------------------------------*/
+/* Page Title Stuff */
+/*--------------------------------------------*/
+
+.titleBar .container-fluid {
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  overflow: hidden;
+}
+
+.navbar {
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  background-color: #eeeeee!important;
+}
+
+/*--------------------------------------------*/
+/* navbar Logo Basic Classes */
+/*--------------------------------------------*/
+
+.myLogo {  /* Navbar Logo Class Selector */
+  color: #222831;
+  font-size: 2rem;   /* (50px font-size / 2560px width */
+  overflow: hidden;
+} .middleLine {
+  color: #ff2e63;
+} .textAlter {
+  color: #eeeeee;
+}
+
+.myLogo.expandPadding {
+  padding: 12px 20px;  /* top right bottom left */
+} .myLogo.hiddenPadding {
+  padding: 0 0 0 0;
+}
+
+
+.navbar.offblink {
+  border-bottom: 0 gainsboro solid;
+}
+
+.navbar.onLink {
+  max-height: 1000px;
+  border-bottom: 1px gainsboro solid;
+}
+
+/*--------------------------------------------*/
+/* navbar Logo Responsive Section */
+/*--------------------------------------------*/
+@media (min-width: 1441px) {
+  .myLogo {  /* Tag + Class Selector affecting the top side links. */
+    font-size: 2.35rem;   /* (50px font-size / 2560px width */
+  }
+}
+
+@media (max-width: 1300px) {
+  .myLogo {  /* Tag + Class Selector affecting the top side links. */
+    font-size: 1.5rem;  /* (18px font-size / 2560px width */
+  }
+}
+
+
+
+/*--------------------------------------------*/
+/* navbar Logo Animation */
+/*--------------------------------------------*/
+.title-A, .textAlter {
+  transition: all 750ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+}
+
+.myLogo.offblink {
+  color: #222831;  /* This affects logo's first color*/
+  max-height: 0;
+}
+
+.myLogo.onLink {
+  max-height: 100px;
+}
+
+.myLogo.onLink .textAlter {
+  text-shadow:
+  1px 0 #00adb5,
+  2px 0 #00adb5,
+  3px 0 #00adb5,
+  4px 0 #00adb5,
+  5px 0 #00adb5,
+  6px 0 #00adb5;
+}
+
+.myLogo.blink {
+  max-height: 100px;
+  color: #eeeeee;
+}
+
+.myLogo.blink .title-A {
+  text-shadow:
+  1px 0 white,
+  2px 0 white,
+  3px 0 #222831,
+  4px 0 white,
+  5px 0 #222831,
+  6px 0 white,
+  7px 0 #222831,
+  8px 0 white;
+}
+
+.myLogo.blink .textAlter {
+  text-shadow:
+  1px 0 white,
+  2px 0 white,
+  3px 0 #00adb5,
+  4px 0 white,
+  5px 0 #00adb5,
+  6px 0 white,
+  7px 0 #00adb5,
+  8px 0 white,
+  9px 0 #00adb5,
+  10px 0 white,
+  11px 0 #00adb5,
+  12px 0 #00adb5,
+  13px 0 #00adb5,
+  14px 0 #00adb5;
+}
+
+/*--------------------------------------------*/
+/* Links */
+/*--------------------------------------------*/
+
+/* navbar links Basic Layout Section */
+.navbar-light .navbar-nav .nav-link {
+  color: #222831;
+}
+
+.navbar-light .navbar-nav .nav-link .fa-home{
+  color: #00adb5;
+}
+
+a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+  font-size: 1rem;  /* (18px font-size / 2560px width */
+  padding: 10px 2px 14px;  /* top right/left bottom */
+  transition: all 50ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  border: 0 #00adb5 solid;
+  border-width: 0;
+} a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  border-width: 1px 0;  /* top right bottom left */
+}
+
+
+
+/* navbar links Responsive Section */
+@media (min-width: 1441px) {
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    font-size: 1.3rem;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    font-size: 0.85rem;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+    font-size: 0.9rem;
+  }
+}
+
+/* navbar Links animation */
+.titleBar li {
+  transition: all 2000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.nav-item.offblink {
+  max-height: 0;
+} .nav-item.onLink {
+  max-height: 50px;
+}
+
+.navbar-nav .btn-secondary{
+  transition: all 500ms linear; /* custom */
+  color: white;
+  background-color: #00adb5;
+  border-color: white;
+  border-radius: 50%;
+}
+.navbar-nav .btn-secondary:hover {
+  color: #00adb5;
+  background-color: white;
+  border-color: #00adb5;
+  border-radius: 50%;
+}
+
+
+/*--------------------------------------------*/
+/* Menu toggler Links animation */
+/*--------------------------------------------*/
+.navbar-toggler {
+  border: 0 solid #08d9d6;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: all 750ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .navbar-toggler:hover {
+  transform: rotate(360deg);
+  border: 0px solid #08d9d6;
+}
+
+.togglerImage {
+  font-size: 28px;
+  border-width: 0;
+}
+
+.navbar-toggler.offblink {
+  font-size: 0;
+  transform: rotate(360deg);
+  color: #ff2e63;
+} .navbar-toggler.onLink {
+  color: #08d9d6;
+} .navbar-toggler.onLink:hover {
+  color: #252a34;
+}
+
+/*--------------------------------------------*/
+/* Navbar sideWipe animation */
+/*--------------------------------------------*/
+
+.titleBar .sideWipe {
+  height: 5px;
+  bottom: 0;
+  width: 25%;
+  position: absolute;
+  margin: 0;
+  background-color: #222831;
+  overflow: hidden;
+  z-index: 4;
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+} .titleBar .leftSideWipe {  /* When the bar is on the left side, we want it to switch to the right side instantly. */
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+  left: -27%;
+} .titleBar .rightSideWipe {  /* Then the bar is on the right side, we want it to switch to the left side slowly. */
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  left: 126%;
+}
+
+/*##################################################*/
+/* Unique Div: Large Image Container Div */
+/*##################################################*/
+
+.lgContainerDiv {  /* Class Selector: Outer Div containing Purpose text boxes */
+  margin: 0 auto;
+}
+
+.lgContainerDiv .container-fluid {
+  height: 35rem;
+  padding: 0;
+}
+
+.noFilt {
+  filter: hue-rotate(0deg);
+} .filt360 {
+  filter: hue-rotate(90deg);
+}
+
+/*--------------------------------------------*/
+/* Large Image Container animation  */
+/*--------------------------------------------*/
+
+/* The basic transition animation speeds */
+.transition1 {
+  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
+}
+
+/* Large Image Container Responsive Section */
+@media (min-width: 1441px) {
+  .lgContainerDiv .container-fluid {
+    height: 55rem;
+  }
+}
+
+/*##################################################*/
+/* Unique Div: RevealCard Div */
+/*##################################################*/
+
+.RevealCard {
+  overflow-x: hidden;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.RevealCard .Title {
+  overflow: hidden;
+}
+
+.RevealCard .sideWipe1 {
+  height: 6px;
+  top: 0;
+  width: 25%;
+  position: absolute;
+  margin: 0;
+  background-color: #08d9d6;
+  overflow: hidden;
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .RevealCard .sideWipe2 {
+  height: 6px;
+  bottom: 0;
+  width: 25%;
+  position: absolute;
+  margin: 0;
+  background-color: #08d9d6;
+  overflow: hidden;
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .RevealCard .leftSideWipe {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  left: -27%;
+} .RevealCard .rightSideWipe {
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  left: 126%;
+}
+
+.RevealCard .vertWipe {
+  height: 300px;
+  width: 5px;
+  position: relative;
+  margin: 0;
+  background-color: #08d9d6;
+} .RevealCard .upVertWipe {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  top: -300px;
+} .RevealCard .downVertWipe {
+  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  top: 600px;
+} .RevealCard .upVertWipe1 {
+  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  top: -300px;
+} .RevealCard .downVertWipe1 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  top: 600px;
+}
+
+.RevealCard .verticalLine {
+  background-color: #222831;
+  position: relative;
+  height: 300px;
+  width: 10px;
+  top: 0;
+  margin: auto;
+  overflow: hidden;
+} .RevealCard .verticalLine2 {
+  background-color: #222831;
+  position: relative;
+  height: 300px;
+  width: 10px;
+  bottom: 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.RevealCard .container-fluid {
+  margin: 9% auto;  /* top/bottom right/left */
+  width: 60%;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.RevealCard .container-fluid .card {
+  border: 0;
+  border-top: 10px solid #222831;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.RevealCard .container-fluid .card-title {
+  padding: 10px 0;
+  margin: 0;
+  max-height: auto;
+  color: #393e46;
+  background-color: #eeeeee;
+  font-size: 9.375rem;
+  font-weight: 100;
+  text-shadow: 2px 2px #00adb5;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.RevealCard .cardSec:hover .card-title {
+  color: #00adb5;
+  text-shadow:
+    2px 2px #393e46,
+    3px 3px #393e46,
+    4px 4px #393e46;
+}
+
+.RevealCard .container-fluid .card.Text {
+  max-height: 1000px;
+  color: #eeeeee;
+  background-color: #00adb5;
+}
+
+.RevealCard .container-fluid .card .fas.fa-plus {
+  padding: 10px 0;
+  font-size: 1rem;
+  overflow: hidden;
+  max-height: 10000px;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.RevealCard .container-fluid .card .card-text {
+  max-height: 0;
+  padding: 0 20px;
+  font-size: 1.45rem;
+  overflow: hidden;
+  text-align: left;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.RevealCard .container-fluid .card .card-text small {
+  display: block;
+  font-size: 0.9rem;
+  line-height: 1.75;
+}
+
+.RevealCard .container-fluid .card .card-text .btn {
+  font-size: 0.8rem;
+}
+
+.RevealCard .container-fluid .card .fas.fa-plus.plusHide {
+  max-height: 0;
+  padding: 0;
+  font-size: 0;
+  background-color: #eeeeee;
+  border-bottom: 0 solid #393e46;
+} .RevealCard .container-fluid .card .card-text.textReveal {
+  max-height: 1000px;
+  padding: 25px 20px;
+  color: #393e46;
+  background-color: #eeeeee;
+  border-bottom: 10px solid #393e46;
+}
+
+@media (max-width: 1199px) {
+  .RevealCard .container-fluid .card-title {
+    font-size: 8.375rem;
+  }
+
+  .RevealCard .container-fluid .card .fas.fa-plus {
+    font-size: 1rem;
+  }
+
+  .RevealCard .container-fluid .card .card-text {
+    font-size: 1.35rem;
+  }
+} @media (max-width: 991px) {
+  .RevealCard .container-fluid .card-title {
+    font-size: 7.375rem;
+  }
+
+  .RevealCard .container-fluid .card .fas.fa-plus {
+    font-size: 0.8rem;
+  }
+
+  .RevealCard .container-fluid .card .card-text {
+    font-size: 1.3rem;
+  }
+} @media (max-width: 767px) {
+  .RevealCard .container-fluid .card-title {
+    font-size: 5.375rem;
+  }
+
+  .RevealCard .container-fluid .card .fas.fa-plus {
+    font-size: 0.65rem;
+  }
+
+  .RevealCard .container-fluid .card .card-text {
+    font-size: 1.2rem;
+  }
+} @media (max-width: 575px) {
+  .RevealCard .container-fluid .card-title {
+    font-size: 4.375rem;
+  }
+
+  .RevealCard .container-fluid .card .fas.fa-plus {
+    font-size: 0.5rem;
+  }
+
+  .RevealCard .container-fluid .card .card-text {
+    font-size: 1.1rem;
+  }
+}
+
+/*##################################################*/
+/* Unique Div: Large Image Container Div (index.html) */
+/*##################################################*/
+
+/*--------------------------------------------*/
+/* Large Image Container Div specific animation */
+/*--------------------------------------------*/
+.IndexLgContainer .lgContainerInit {
+  background-image: url("001_IndexImages/MountainMosaic4.jpg");
+  background-size: 200% 200%;
+  background-position: right bottom;
+  background-attachment: fixed;
+  filter: contrast(1000%) brightness(70%) hue-rotate(0deg);
+  border-radius: 50%;
+}
+
+.IndexLgContainer .lgContainerFinal {
+  background-image: url("001_IndexImages/MountainMosaic4.jpg");
+  background-size: 100% 120%;
+  background-position: top 0%;
+  background-attachment: fixed;
+  filter: contrast(100%) brightness(100%) hue-rotate(0deg);
+  border-radius: 0%;
+}
+
+.IndexLgContainer .transition1 {
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .IndexLgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
+}
+
+/*--------------------------------------------*/
+/* indexQuote parallax quote  */
+/*--------------------------------------------*/
+.indexQuote {  /* Original formatting of the indexQuote (adjusting the card's default formatting */
+  border: none;
+  background-color: transparent;
+  overflow: hidden;
+  text-align: left;
+  position: absolute;
+  width: 70%;
+  top: 50%;
+  left: 3%;
+  z-index: 2;
+}
+
+.indexQuote.qtextShadow a {
+  color: inherit;
+  text-decoration: none;
+} .indexQuote.qtextShadow a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.indexQuote.qtextShadowHover a {
+  color: inherit;
+  text-decoration: none;
+} .indexQuote.qtextShadowHover a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+
+.indexQuote .card-title {
+  font-size: 6rem;
+}
+
+/* The normal text shadow */
+.indexQuote.qtextShadow {
+  color: #222831;
+  text-shadow:
+    1px 1px #00adb5,
+    2px 2px #00adb5,
+    3px 3px #00adb5,
+    4px 4px #00adb5,
+    5px 5px #00adb5,
+    6px 6px #00adb5,
+    7px 7px #00adb5,
+    8px 8px #00adb5,
+    9px 9px #00adb5,
+    10px 10px #00adb5,
+    11px 11px #222831,
+    12px 12px #222831,
+    13px 13px #222831,
+    14px 14px #222831
+  ;
+}
+
+/* The hover text shadow */
+.indexQuote.qtextShadowHover {
+  color: #00adb5;
+  text-shadow:
+    /*1px 0 0px #eeeeee,
+    2px 0 0px #eeeeee,
+    3px 0 0px #eeeeee,
+    4px 0 0px #eeeeee,
+    5px 0 0px #eeeeee,
+    6px 0 0px #eeeeee,
+    7px 0 0px #eeeeee,
+    8px 0 0px #eeeeee,
+    9px 0 0px #eeeeee,
+    10px 0 0px #eeeeee,
+    11px 0 0px #eeeeee,
+    12px 0 0px #eeeeee,
+    13px 0 0px #eeeeee,
+    14px 0 0px #eeeeee,
+    15px 0 0px #eeeeee,
+    16px 0 0px #eeeeee,
+    17px 0 0px #eeeeee,
+    18px 0 0px #eeeeee,
+    19px 0 0px #eeeeee,
+    20px 0 0px #00adb5,
+    21px 0 0px #222831,
+    22px 0 0px #00adb5,
+    23px 0 8px #222831,
+    24px 0 0px #00adb5,
+    25px 0 0px #222831,
+    26px 0 0px #00adb5,
+    27px 0 0px #222831,
+    28px 0 0px #00adb5,
+    29px 0 0px #222831,
+    30px 0 0px #00adb5,
+    31px 0 0px #222831,
+    32px 0 0px #00adb5,
+    33px 0 0px #222831,
+    34px 0 0px #00adb5,
+    35px 0 0px #222831,
+    36px 0 0px #00adb5,
+    37px 0 0px #222831,
+    38px 0 0px #00adb5,
+    39px 0 0px #222831*/
+
+    1px -1px 0px #00adb5,
+    2px -2px 0px #00adb5,
+    3px -3px 0px #00adb5,
+    4px -4px 0px #00adb5,
+    5px -5px 0px #00adb5,
+    6px -6px 0px #00adb5,
+    7px -7px 0px #00adb5,
+    8px -8px 0px #00adb5,
+    9px -9px 0px #00adb5,
+    10px -10px 0px #222831,
+    11px -11px 0px #00adb5,
+    12px -12px 0px #222831,
+    13px -13px 0px #00adb5,
+    14px -14px 0px #222831,
+    15px -15px 0px #00adb5,
+    16px -16px 0px #222831,
+    17px -17px 0px #00adb5,
+    18px -18px 0px #222831,
+    19px -19px 0px #00adb5,
+    20px -20px 0px #222831,
+    21px -21px 0px #00adb5,
+    22px -22px 0px #222831,
+    23px -23px 8px #00adb5,
+    24px -24px 0px #222831,
+    25px -25px 0px #00adb5,
+    26px -26px 0px #222831,
+    27px -27px 0px #00adb5,
+    28px -28px 0px #222831
+  ;
+}
+
+/* IndexQuote Container Responsive Section */
+@media (min-width: 1441px) {
+  .indexQuote .card-title {
+    font-size: 8rem;
+  }
+
+  .indexQuote {
+    right: 5%;
+  }
+} @media (max-width: 1199px) {
+  .indexQuote .card-title {
+    font-size: 3.8rem;
+  }
+
+  .indexQuote {
+    right: 5%;
+  }
+} @media (max-width: 991px) {
+
+} @media (max-width: 767px) {
+  .indexQuote .card-title {
+    font-size: 2.5rem;
+  }
+
+  .indexQuote {
+    right: 10%;
+  }
+} @media (max-width: 575px) {
+  .indexQuote .card-title {
+    font-size: 1.2rem;
+  }
+
+  .indexQuote {
+    right: 10%;
+  }
+}
+
+/* These handle the indexQuote animation when the page opens */
+.indexQuote.displayQuote {
+  max-height: 1000px;
+} .indexQuote.displayNone {
+  max-height: 0;
+  transform: translate3d(100px, 0, 100px) rotateX(45deg) rotateZ(-30deg);
+}
+
+/*##################################################*/
+/* Unique Div: TwoColSec div */
+/*##################################################*/
+
+.TwoColSec {}
+
+.TwoColSec .container-fluid {
+  width: 100%;
+  padding: 0;
+}
+
+.TwoColSec .ColSide {
+  background-color: white;
+  height: auto;
+  border-color: #eeeeee;
+}
+
+.TwoColSec .LeftColSide {
+  white-space: normal;
+  text-align: left;
+  color: #222831;
+  margin: 0;
+  padding: 7% 35% 15% 5%;
+  font-size: 2.2rem;
+  line-height: 30px;
+  transition: all 0ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.TwoColSec .RightColSide {
+  white-space: normal;
+  text-align: left;
+  margin: 0;
+  color: #222831;
+  padding: 7% 7% 30% 6%;
+  font-size: 1.4rem;
+  transition: all 0ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+
+/*##################################################*/
+/* Unique Div: FeaturedTextDiv Div */
+/*##################################################*/
+
+.FeaturedTextDiv {
+  max-width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 7% auto;  /* top/bottom right/left */
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+}
+
+.FeaturedImgIndex {
+  background-image: url("001_IndexImages/Abstract1Filt3.jpg");
+}
+
+.FeaturedTextDiv .FeatPgh {
+  margin: 10% 25% 5% 10%;
+  color: #00adb5;
+  line-height: 50px;
+  text-align: left;
+  font-size: 3.5rem;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1%;
+  transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+  white-space: normal;
+}
+
+.FeaturedTextDiv .btn {
+  font-size: 1.5rem;
+  width: 30%;
+  margin: 10% 25% 10% 10%;
+  margin-top: 10px;
+}
+
+.FeaturedTextDiv .btn {
+  color: #222831!important;
+}
+
+@media (max-width: 767px) {
+  .FeatPgh {
+    font-size: 1rem;
+  }
+
+  .FeaturedTextDiv .btn {
+    font-size: 0.9rem;
+  }
+}
+
+
+/*##################################################*/
+/* Unique Div: bottomBox */
+/*##################################################*/
+
+    .bottomBox {
+      margin-top: 100px;
+      vertical-align: bottom;
+      color: #eeeeee;
+    }
+
+    .bottomDiv {
+      padding: 3% 8%;  /* top/bottom left/right */
+      margin: 0;
+      height: auto;
+      background-color: #222831;
+      font-size: 1rem;  /* (18px font-size / 2560px width */
+      text-decoration: none;
+    }
+
+    .bottomDiv {
+      text-align: right;
+      color: #eeeeee;
+    }
+
+    .bottomDiv .col-sm-2 {
+      color: #eeeeee;
+    }
+
+    .bottomLink {
+      color: #eeeeee;
+      text-decoration: none;
+      transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    }
+
+    .bottomLink:hover {
+      text-decoration: none;
+      color: #ff2e63;
+    }
+
+    .socialLink {
+      color: #eeeeee;
+      text-decoration: none;
+      padding: 8px;
+      border-style: none;
+      border-width: 0;
+      transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    }
+
+    .socialLink:hover {
+      text-decoration: none;
+      color: #08d9d6;
+      border-width: 1px;
+      border-radius: 100%;
+      border-style: solid;
+      border-color: #08d9d6;
+    }
+
+    .copyrightText {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      color: #eeeeee;
+      font-size: 1rem;
+      text-align: left;
+    }
+
+    .myLogo_bottom {  /* Class Selector */
+      color: #08d9d6;
+      padding: 0;  /* top right bottom left */
+      font-size: 2rem;   /* (50px font-size / 2560px width */
+    }
+
+    .middleLine_bottom {
+      color: #ff2e63;
+    }
+
+    .textAlter_bottom {
+      text-decoration: underline;
+      color: #eeeeee;
+    }
+
+    @media (max-width: 1023px) {
+      .bottomDiv {
+        font-size: 1.25rem;
+      }
+
+      .myLogo_bottom {  /* Class Selector */
+        font-size: 1.8rem;
+      }
+
+      .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-6 {
+        padding-top: 10px;
+      }
+    }
+
+
+
+/*##################################################*/
+/* 002.html: MY RELEVANT EXPERIENCES */
+/*##################################################*/
+
+/*--------------------------------------------*/
+/* Large Image Container Div specific animation */
+/*--------------------------------------------*/
+.lgContainerDiv {  /* Class Selector: Outer Div containing Purpose text boxes */
+  margin: 100px auto;
+}
+
+.pg2LgContainer .lgContainerInit {
+  background-image: url("002_Images/spaceImage4.jpg");
+  background-size: 200% 200%;
+  background-position: center bottom;
+  background-attachment: fixed;
+  filter: contrast(1000%) brightness(70%) hue-rotate(0deg);
+  border-radius: 50%;
+}
+
+.pg2LgContainer .lgContainerFinal {
+  background-image: url("002_Images/spaceImage4.jpg");
+  background-size: 100% 112%;
+  background-position: center 0%;
+  background-attachment: fixed;
+  filter: contrast(100%) brightness(100%) hue-rotate(0deg);
+  border-radius: 0%;
+}
+
+.pg2LgContainer .transition1 {
+  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .pg2LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
+}
+
+/*--------------------------------------------*/
+/* indexQuote parallax quote  */
+/*--------------------------------------------*/
+
+.pg2LgContainer .widthZero {
+  max-width: 0;
+}
+
+.pg2LgContainer .widthFull {
+  max-width: 50px;
+}
+
+.pg2LgContainer .boxQuote {
+  display: inline-block;
+  width: 44%;
+  text-align: left;
+  position: absolute;
+  right: 7%;
+  top: 55%;
+  border: none;
+  background-color: white;
+  overflow: hidden;
+  z-index: 2;
+  transition:
+    all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860),
+    top 0ms ease-out;
+}
+
+.pg2LgContainer .boxQuote .card-title {
+  font-size: 2rem;
+  padding: 10px 25px;
+}
+
+.pg2LgContainer .boxQuote.displayQuote {
+  max-height: 300px;
+  border-radius: 0;
+}
+
+.pg2LgContainer .boxQuote.displayNone {
+  max-height: 0;
+  border-radius: 100%;
+}
+
+.pg2LgContainer .boxShadowExp {
+  box-shadow:
+    1px 1px #00adb5,
+    2px 2px #eeeeee,
+    3px 3px #00adb5,
+    4px 4px #eeeeee,
+    5px 5px #00adb5,
+    6px 6px #eeeeee,
+    7px 7px #00adb5,
+    8px 8px #eeeeee,
+    9px 9px #00adb5,
+    10px 10px #eeeeee,
+    11px 11px #00adb5,
+    12px 12px #eeeeee,
+    13px 13px #00adb5,
+    14px 14px #eeeeee,
+    15px 15px #00adb5,
+    16px 16px #eeeeee,
+    17px 17px #00adb5,
+    18px 18px #eeeeee,
+    19px 19px #00adb5,
+    20px 20px #eeeeee,
+    21px 21px #00adb5,
+    22px 22px #eeeeee,
+    23px 23px #00adb5,
+    24px 24px #eeeeee,
+    25px 25px #00adb5,
+    26px 26px #eeeeee,
+    27px 27px #00adb5,
+    28px 28px #eeeeee,
+    29px 29px #00adb5,
+    30px 30px #eeeeee,
+    31px 31px #00adb5,
+    32px 32px #eeeeee,
+    33px 33px #00adb5,
+    34px 34px #eeeeee,
+    35px 35px #00adb5,
+    36px 36px #eeeeee,
+    37px 37px #00adb5,
+    38px 38px #eeeeee,
+    39px 39px #00adb5;
+}
+
+.pg2LgContainer .qtextShadowHover {
+  color: #00adb5;
+  text-shadow:
+    1px 1px #eeeeee,
+    2px 2px #eeeeee,
+    3px 3px #00adb5,
+    4px 4px #00adb5,
+    5px 5px #00adb5
+  ;
+}
+
+@media (min-width: 1441px) {
+  .pg2LgContainer .boxQuote .card-title {
+    font-size: 3.5rem;
+  }
+
+  .pg2LgContainer .boxQuote {
+    right: 5%;
+    width: 35%;
+  }
+}
+
+@media (max-width: 1199px) {
+  .pg2LgContainer .boxQuote .card-title {
+    font-size: 2.25rem;
+  }
+
+  .pg2LgContainer .boxQuote {
+    right: 5%;
+    width: 50%;
+  }
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+  .pg2LgContainer .boxQuote .card-title {
+    font-size: 2rem;
+  }
+
+  .pg2LgContainer .boxQuote {
+    right: 10%;
+    width: 59%;
+  }
+}
+
+@media (max-width: 575px) {
+  .pg2LgContainer .boxQuote .card-title {
+    font-size: 2rem;
+  }
+
+  .pg2LgContainer .boxQuote {
+    right: 10%;
+    width: 75%;
+  }
+}
+
+/* FourBlock: 002.html */
+
+.FourBlock {
+  text-align: left;
+  margin-top: 100px;
+  margin-bottom: 150px;
+  transition: all 1000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+}
+
+.FourBlock .container-fluid {
+  margin: 100px auto;
+  width: 100%;
+}
+
+@media (min-width: 1441px) {
+  .FourBlock .col-md-6 {
+    padding: 25px 150px;
+  }
+
+  .FourBlock .card-title {
+    font-size: 5.375rem;
+  }
+
+  .FourBlock .card-text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1440px) {
+  .FourBlock .col-md-6 {
+    padding: 25px 100px;
+  }
+
+  .FourBlock .card-title {
+    font-size: 3.375rem;
+  }
+
+  .FourBlock .card-text {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 1199px) {
+  .FourBlock .col-md-6 {
+    padding: 25px 75px;
+  }
+
+  .FourBlock .card-title {
+    font-size: 5.375rem;
+  }
+
+  .FourBlock .card-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .FourBlock .col-md-6 {
+    padding: 25px 50px;
+  }
+
+  .FourBlock .card-title {
+    font-size: 4.375rem;
+  }
+
+  .FourBlock .card-text {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .FourBlock .col-md-6 {
+    padding: 25px 40px;
+  }
+
+  .FourBlock .card-title {
+    font-size: 3.375rem;
+  }
+
+  .FourBlock .card-text {
+    font-size: 1rem;
+  }
+}
+
+.FourBlockTrnstn {
+  transition: all 1000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+}
+
+/*##################################################*/
+/* 003.html: MY EDUCATION & SKILLS */
+/*##################################################*/
+
+/*--------------------------------------------*/
+/* Large Image Container Div specific animation */
+/*--------------------------------------------*/
+
+.pg3LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
+}
+
+.pg3LgContainer .container-fluid {
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  transition: all 6000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+}
+
+.pg3LgContainer .lgContainerInit {
+  background-image: url("003_Images/FlowerMod5.jpg");
+  background-size: 200% 200%;
+  background-attachment: fixed;
+  background-position: bottom;
+  filter: contrast(1000%) brightness(75%) saturate(50%) hue-rotate(45deg);
+  border-radius: 50%;
+}
+
+.pg3LgContainer .lgContainerFinal {
+  background-image: url("003_Images/FlowerMod5.jpg");
+  background-size: 100% 159%;
+  background-attachment: fixed;
+  background-position: top right;
+  filter: contrast(1000%) brightness(100%) saturate(1000%) hue-rotate(0deg);
+  border-radius: 0%;
+}
+
+.pg3LgContainer .transition1 {
+  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .pg3LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
+}
+
+.FeaturedUsers {
+  max-width: 100%;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 500px;
+  margin: auto;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.FeaturedUsers.First {
+  background-image: url("003_Images/TreesMod.jpg");
+}
+
+.FeaturedUsers.Second {
+  background-image: url("003_Images/carousel2_1.jpg");
+}
+
+.FeaturedUsers.Third {
+  background-image: url("003_Images/Carousel3.jpg");
+  background-position: center;
+}
+
+.FeatTitleUsers {
+  text-shadow:
+    2px 2px #eeeeee,
+    3px 3px #eeeeee,
+    4px 4px #eeeeee,
+    5px 5px #eeeeee,
+    6px 6px #eeeeee,
+    7px 7px #222831,
+    8px 8px #eeeeee;
+  color: #222831;
+  margin-top: 100px;
+  font-size: 5.375rem;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+}
+
+.FeatPghUsers {
+  margin: 25px 100px 10px;
+  color: #252a34;
+  text-shadow: 1px 1px #ff2e63;
+  line-height: 25px;
+  font-size: 1.75rem;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 1%;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+}
+
+.FeaturedUsers .btn {
+  font-size: 1.5rem;
+  width: 30%;
+  margin: auto;
+  margin-top: 10px;
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+}
+
+@media (max-width: 767px) {
+  .FeatTitleUsers {
+    font-size: 6.375rem;
+  }
+
+  .FeatPghUsers {
+    font-size: 1rem;
+  }
+
+  .FeaturedUsers .btn {
+    font-size: 0.9rem;
+  }
+}
+
+/*##################################################*/
+/* 004.html: MY DRIVE & PHILOSOPHY */
+/*##################################################*/
+
+/*--------------------------------------------*/
+/* Large Image Container Div specific animation */
+/*--------------------------------------------*/
+
+.pg4LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
+}
+
+.pg4LgContainer .container-fluid {
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  transition: all 6000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+}
+
+.pg4LgContainer .lgContainerInit {
+  background-image: url("004_Images/NatureNew.jpg");
+  background-size: 1000% 1000%;
+  background-position: top left;
+  filter: contrast(1000%) brightness(75%) saturate(50%) hue-rotate(180deg) rotate(720deg);
+  background-attachment: fixed;
+  back
+  border-radius: 50%;
+}
+
+.pg4LgContainer .lgContainerFinal {
+  background-image: url("004_Images/NatureNew1.jpg");
+  background-size: 120% 191%;
+  background-position: bottom center;
+  filter: contrast(100%) brightness(100%) saturate(100%) hue-rotate(0deg) rotate(0deg);
+  background-attachment: fixed;
+  border-radius: 0%;
+}
+
+.pg4LgContainer .transition1 {
+  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .pg4LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
+}
+
+/*--------------------------------------------*/
+/* Large Image Container Div specific animation */
+/*--------------------------------------------*/
+
+.FeaturedImgPg4  {
+  background-image: url("004_Images/EarthMod1.jpg");
+  background-position: bottom;
+}
+
+/*##################################################*/
+/* 005.html: MY INTERESTS */
+/*##################################################*/
+
+.pg5LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
+}
+
+.pg5LgContainer .container-fluid {
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+}
+
+.pg5LgContainer .lgContainerInit {
+  background-image: url('005-Images/books1Art6.jpg');
+  background-size: 1000% 1000%;
+  background-position: bottom;
+  filter: contrast(10000%) brightness(1000%);
+  border-radius: 50%;
+}
+
+.pg5LgContainer .lgContainerFinal {
+  background-image: url('005-Images/books1Art6.jpg');
+  background-size: 120% 191%;
+  background-position: center;
+  filter: contrast(1000%) brightness(1000%);
+  border-radius: 0%;
+}
+
+.pg5LgContainer .transition1 {
+  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .pg5LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
+}
+
+/*##################################################*/
+/* 006.html: CONTACT ME */
+/*##################################################*/
+
+.pg6LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
+}
+
+.pg6LgContainer .container-fluid {
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+}
+
+.pg6LgContainer .lgContainerInit {
+  background-image: url('006-Images/ProfilePic1.jpg');
+  background-size: 1%;
+  background-position: top;
+  filter: contrast(100%) brightness(100%) saturate(100%) blur(10px);
+  border-radius: 100%;
+}
+
+.pg6LgContainer .lgContainerFinal {
+  background-image: url('006-Images/ProfilePic1.jpg');
+  background-size: 20%;
+  background-position: center;
+  background-blend-mode: lighten;
+  background-attachment: fixed;
+  filter: contrast(100%) brightness(100%) saturate(100%) blur(0px);
+  border-radius: 0%;
+}
+
+.pg6LgContainer .transition1 {
+  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+} .pg6LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
+}
+
+/*##################################################*/
+/* Revealing Items classes */
+/*##################################################*/
+
+/* Revealing RevealCard on scroll */
+.hideDiv {
+  max-width: 0;
+  opacity: 0;
+  transform: rotateY(60deg) rotateZ(30deg);
+}
+
+.revealDiv {
+  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+
+  max-width: 2560px;
+  opacity: 100%;
+  transform: rotateY(0) rotateZ(0);
+}
+
+.Ichi.hideDiv {
+  max-width: 0;
+  opacity: 0;
+  transform: rotateY(-90deg) rotateZ(-15deg);
+}
+
+.Ichi.revealDiv {
+  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+
+  max-width: 2560px;
+  opacity: 100%;
+  transform: rotateY(0) rotateZ(0);
+}
+
+
+/* Revealing Purpose boxes */
+.FeatPgh.hideDiv {
+  max-width: 0;
+  opacity: 0;
+  transform: rotateY(60deg) rotateZ(-15deg);
+}
+
+.FeatPgh.revealDiv {
+  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+
+  max-width: 2560px;
+  opacity: 100%;
+  transform: rotateY(0) rotateZ(0);
+}
+
+.FeaturedTextDiv .btn {
+  transition: all 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
+}
+
+.myLogo {
+  transition: all 2000ms cubic-bezier(0.875, 0.005, 0.135, 1.000);
+}
+
+.indexQuote {
+  transition: all 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), top 300ms cubic-bezier(0.250, 0.460, 0.000, 1.000);
+}
+
+.pg2LgContainer .boxQuote {
+  transition: all 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860), top 300ms cubic-bezier(0.250, 0.460, 0.000, 1.000);
+}
+
+
+
+
+
+/**/
