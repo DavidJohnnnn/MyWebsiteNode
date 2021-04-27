@@ -1,3 +1,5 @@
+// jshint esversion:6
+
 let express = require("express");
 let bodyParser = require("body-parser");
 
@@ -6,8 +8,10 @@ let app = express();
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.set('view engine', 'ejs');
+
 app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
+  res.render("index");
 });
 
 app.get("/My-History", function (req, res) {
@@ -39,11 +43,6 @@ app.get("/My-Training.html", function (req, res) {
 app.get("/About-Me.html", function (req, res) {
   res.redirect("/About-Me");
 });
-
-app.get("/", function (req, res) {
-  res.sendFile(__dirname + "/index.html");
-});
-
 
 
 

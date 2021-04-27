@@ -105,9 +105,6 @@ setTimeout(function () {
 
 sideWipe(2200);
 
-// Animate the logo after revealing it
-titleSparkle(4700);
-
 // Animate the Quote revealing for each page when it is necessary to reveal
 setTimeout(function () {
   $(".IndexLgContainer div.indexQuote").removeClass("displayNone").addClass("displayQuote");
@@ -232,7 +229,7 @@ function titleSparkle(offset) {
 
   setTimeout(function () {
     $(".myLogo").removeClass("blink");
-  }, offset + 2000);
+  }, offset + 4000);
 }
 
 function boxshadowEff(offset) {
