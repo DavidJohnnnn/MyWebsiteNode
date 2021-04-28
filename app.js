@@ -23,7 +23,7 @@ app.get("/My-Training", function (req, res) {
 });
 
 app.get("/About-Me", function (req, res) {
-  res.sendFile(__dirname + "/About-Me.html");
+  res.render("About-Me");
 });
 
 
