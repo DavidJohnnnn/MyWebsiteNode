@@ -15,7 +15,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/My-History", function (req, res) {
-  res.sendFile(__dirname + "/My-History.html");
+  res.render("My-History");
 });
 
 app.get("/My-Training", function (req, res) {

@@ -12,14 +12,30 @@ https://www.flickr.com/photos/63339095@N05/8441280651
 
  -->
 
-<%- include('header', {tabTitle: "I'm David John", favicon: "initial_favicon.ico", pageID: "001-indexPage"}); -%>
+<%- include('header', {
+  tabTitle: "I'm David John",
+  favicon: "initial_favicon.ico",
+  pageID: "001-indexPage"
+}); -%>
 
     <%- include('titleBar'); %>
 
-    <%- include('lgContainerDiv', {pageClass: "IndexLgContainer", quoteHTML: '<div class="card mb-3 indexQuote displayNone qtextShadow"><h5 class="card-title"><a href="https://github.com/DavidJohnnnn/My-Own-Website">"EVERYTHING<br>YOU CAN IMAGINE<br>IS REAL"<br>&nbsp;&nbsp;&nbsp;- Picasso</a></h5></div>'}); %>
+    <%- include('lgContainerDiv', {
+      pageClass: "IndexLgContainer",
+      quoteHTML: '<div class="card mb-3 indexQuote displayNone qtextShadow"><h5 class="card-title"><a href="https://github.com/DavidJohnnnn/My-Own-Website">"EVERYTHING<br>YOU CAN IMAGINE<br>IS REAL"<br>&nbsp;&nbsp;&nbsp;- Picasso</a></h5></div>'
+    }); %>
 
-    <%- include('revealCard', {position: "Shitotsu", cardTitle: "Purpose", cardText: 'My name is David and this is my website. This website contains some useful information about me. I am an Electrical Engineering Graduate from the University of Toronto, St. George Campus (BASc) in search of programming and web development work. You can explore this website to learn more about me. Try my <a href="My-History.html">Relevant Experiences</a> next.'}); %>
+    <%- include('revealCard', {
+      position: "Shitotsu",
+      cardTitle: "Purpose",
+      cardText: 'My name is David and this is my website. This website contains some useful information about me. I am an Electrical Engineering Graduate from the University of Toronto, St. George Campus (BASc) in search of programming and web development work. You can explore this website to learn more about me. Try my <a href="My-History.html">Relevant Experiences</a> next.'
+    }); %>
 
-    <%- include('featuredTextDiv', {FeaturedImgIndex: "FeaturedImgIndex", paragraph: "If you want to get in contact, you can reach me on Linked In.", link: "https://www.linkedin.com/in/david-j-john/", linkText: "Here I am!"}); %>
+    <%- include('featuredTextDiv', {
+      FeaturedImgIndex: "FeaturedImgIndex",
+      paragraph: "If you want to get in contact, you can reach me on Linked In.",
+      link: "https://www.linkedin.com/in/david-j-john/",
+      linkText: "Here I am!"
+    }); %>
 
 <%- include('footer'); -%>
