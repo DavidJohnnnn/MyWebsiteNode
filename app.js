@@ -19,7 +19,7 @@ app.get("/My-History", function (req, res) {
 });
 
 app.get("/My-Training", function (req, res) {
-  res.sendFile(__dirname + "/My-Training.html");
+  res.render("My-Training");
 });
 
 app.get("/About-Me", function (req, res) {

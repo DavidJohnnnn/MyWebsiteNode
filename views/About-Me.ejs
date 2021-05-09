@@ -9,13 +9,24 @@ https://www.flickr.com/photos/48660975@N02/19663096295
  -->
 
 
-<%- include('header', {tabTitle: "About Me", favicon: "Treefavicon.ico", pageID: "006-Page"}); -%>
+<%- include('header', {
+  tabTitle: "About Me",
+  favicon: "Treefavicon.ico",
+  pageID: "006-Page"
+}); -%>
 
     <%- include('titleBar'); %>
 
-    <%- include('lgContainerDiv', {pageClass: "pg6LgContainer", quoteHTML: ''}); %>
+    <%- include('lgContainerDiv', {
+      pageClass: "pg6LgContainer",
+      quoteHTML: ''
+    }); %>
 
-    <%- include('revealCard', {position: "Shitotsu", cardTitle: "Who Am I?", cardText: 'Just a normal guy moving forward.'}); %>
+    <%- include('revealCard', {
+      position: "Shitotsu",
+      cardTitle: "Who Am I?",
+      cardText: 'Just a normal guy moving forward.'
+    }); %>
 
     <%- include('TwoColSec', {
       LeftColSideText: "About Me",
