@@ -17,13 +17,34 @@ https://www.flickr.com/photos/8572247@N03/11864257173
 
     <%- include('lgContainerDiv', {
       pageClass: "pg2LgContainer",
-      quoteHTML: '<div class="card border-success mb-3 boxQuote displayNone"><h5 class="card-title">Hang on to your youthful enthusiasms — you’ll be able to use them better when you’re older.<br><small style="font-size: 1.3rem">― Seneca</small></h5></div>'
+      quoteHTML: `
+      <div class="card border-success mb-3 boxQuote displayNone">
+        <h5 class="card-title">
+          Hang on to your youthful enthusiasms — you’ll be able to use them better when you’re older.
+          <br>
+          <small style="font-size: 1.3rem">
+            ― Seneca
+          </small>
+        </h5>
+      </div>`
     }); %>
 
     <%- include('revealCard', {
       position: "Ichi",
       cardTitle: "MY HISTORY",
-      cardText: 'This page focuses on some of my highlights over the past few years that I feel are relevant.<br><br><small>This element is something I made myself using some Bootstrap and a lot of custom CSS and JavaScript (you can see more if you search the css, js and html files for "RevealCard". <a href="https://github.com/DavidJohnnnn/My-Own-Website" class="btn btn-outline-info btn-sm" role="button" aria-pressed="true">Check out the repo</a><br><br>Press this section again to close.</small>'
+      cardText: `
+      This page focuses on some of my highlights over the past few years that I feel are relevant.
+      <br>
+      <br>
+      <small>
+        This element is something I made myself using some Bootstrap and a lot of custom CSS and JavaScript (you can see more if you search the css, js and html files for "RevealCard". 
+        <a href="https://github.com/DavidJohnnnn/My-Own-Website" class="btn btn-outline-info btn-sm" role="button" aria-pressed="true" onclick="window.open(this.href); return false;">
+          Check out the repo
+        </a>
+        <br>
+        <br>
+        Press this section again to close.
+      </small>`
     }); %>
 
     <section class="FourBlock">
