@@ -862,11 +862,11 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .FeaturedTextDiv .FeatPgh {
-  margin: 10% 25% 5% 10%;
+  margin: 10% 25% 2% 10%;
   color: #00adb5;
-  line-height: 50px;
+  line-height: 25px;
   text-align: left;
-  font-size: 3.5rem;
+  font-size: 2rem;
   background-color: rgba(255, 255, 255, 1);
   padding: 1%;
   transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
