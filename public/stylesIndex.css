@@ -609,7 +609,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   background-size: 100% 120%;
   background-position: right bottom;
   background-attachment: fixed;
-  filter: brightness(80%);
+  filter: brightness(50%);
   border-radius: 50%;
 }
 
@@ -1016,12 +1016,12 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   background-size: 100% 112%;
   background-position: center 0%;
   background-attachment: fixed;
-  filter: brightness(100%);
+  filter: brightness(125%);
   border-radius: 0%;
 }
 
 .pg2LgContainer .transition1 {
-  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .pg2LgContainer .transition2 {
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
@@ -1113,13 +1113,13 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg2LgContainer .qtextShadowHover {
-  color: #00adb5;
+  color: crimson;
   text-shadow:
     1px 1px #eeeeee,
     2px 2px #eeeeee,
-    3px 3px #00adb5,
-    4px 4px #00adb5,
-    5px 5px #00adb5
+    3px 3px #000000,
+    4px 4px #000000,
+    5px 5px #000000
   ;
 }
 
@@ -1279,7 +1279,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   background-size: 100% 159%;
   background-attachment: fixed;
   background-position: bottom;
-  filter: brightness(75%) saturate(50%);
+  filter: brightness(60%);
   border-radius: 50%;
 }
 
@@ -1288,12 +1288,12 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   background-size: 100% 159%;
   background-attachment: fixed;
   background-position: center right;
-  filter: brightness(150%) saturate(1000%);
+  filter: brightness(100%);
   border-radius: 0%;
 }
 
 .pg3LgContainer .transition1 {
-  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .pg3LgContainer .transition2 {
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
@@ -1404,7 +1404,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg4LgContainer .transition1 {
-  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .pg4LgContainer .transition2 {
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
@@ -1466,7 +1466,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 
 .pg6LgContainer .lgContainerInit {
   background-image: url('006-Images/ProfilePic1.jpg');
-  background-size: 1%;
+  background-size: 4%;
   background-position: top;
   filter: contrast(100%) brightness(100%) saturate(100%) blur(10px);
   border-radius: 100%;
@@ -1483,7 +1483,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg6LgContainer .transition1 {
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
 } .pg6LgContainer .transition2 {
   transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
 }
