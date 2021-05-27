@@ -152,18 +152,43 @@ body {  /* Tag Selector */
 /*--------------------------------------------*/
 /* navbar Logo Responsive Section */
 /*--------------------------------------------*/
+
+/* 4K viewport (>1441px) */
 @media (min-width: 1441px) {
   .myLogo {  /* Tag + Class Selector affecting the top side links. */
-    font-size: 2.35rem;   /* (50px font-size / 2560px width */
+    font-size: 2.5vw;   /* (50px font-size / 2560px width */
   }
 }
 
-@media (max-width: 1300px) {
+/* Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px) */
+@media (max-width: 1440px) and (min-width: 769px){
   .myLogo {  /* Tag + Class Selector affecting the top side links. */
-    font-size: 1.5rem;  /* (18px font-size / 2560px width */
+    font-size: 2vw;  /* (18px font-size / 2560px width */
   }
 }
 
+/* Tablet viewport (768px - 426px) */
+@media (max-device-width: 768px) and (min-device-width: 426px){
+  .myLogo {  /* Tag + Class Selector affecting the top side links. */
+    font-size: 3vw;  /* (18px font-size / 2560px width */
+  }
+}
+
+/* Mobile L viewport (425px - 376px) */
+@media (max-device-width: 425px) and (min-device-width: 376px) {
+  .myLogo {  /* Tag + Class Selector affecting the top side links. */
+    font-size: 5vw;  /* (18px font-size / 2560px width */
+  }
+}
+
+/* Mobile M viewport (375px - 321px) and Mobile S viewport (>320px) */
+@media (max-device-width: 375px) and (min-device-width: 0px) {
+  .myLogo {  /* Tag + Class Selector affecting the top side links. */
+    font-size: 6vw;  /* (18px font-size / 2560px width */
+  }
+}
+
+/*  */
 
 
 /*--------------------------------------------*/
@@ -241,8 +266,6 @@ body {  /* Tag Selector */
 }
 
 a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-  font-size: 1rem;  /* (18px font-size / 2560px width */
-  padding: 10px 2px 14px;  /* top right/left bottom */
   transition: all 50ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   border: 0 #00adb5 solid;
   border-width: 0;
@@ -250,26 +273,10 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   border-width: 1px 0;  /* top right bottom left */
 }
 
-
-
-/* navbar links Responsive Section */
-@media (min-width: 1441px) {
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    font-size: 1.3rem;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 1300px) {
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    font-size: 0.85rem;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
-    font-size: 0.9rem;
-  }
-}
-
+/*--------------------------------------------*/
 /* navbar Links animation */
+/*--------------------------------------------*/
+
 .titleBar li {
   transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   overflow: hidden;
@@ -278,13 +285,9 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 
 .nav-item.offblink {
   max-height: 0;
-  /*max-width: 0;
-  border-radius: 100;*/
   transform: rotateX(0deg);
 } .nav-item.onLink {
-  max-height: 50px;
-  /*max-width: 250px;
-  border-radius: 0;*/
+  max-height: 200px;
   transform: rotateX(-360deg);
 }
 
@@ -302,7 +305,6 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   border-radius: 50%;
 }
 
-
 /*--------------------------------------------*/
 /* Menu toggler Links animation */
 /*--------------------------------------------*/
@@ -316,11 +318,6 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   border: 0px solid #08d9d6;
 }
 
-.togglerImage {
-  font-size: 28px;
-  border-width: 0;
-}
-
 .navbar-toggler.offblink {
   font-size: 0;
   transform: rotate(360deg);
@@ -330,6 +327,143 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 } .navbar-toggler.onLink:hover {
   color: #252a34;
 }
+
+
+
+/*--------------------------------------------*/
+/* navbar links Responsive Section */
+/*--------------------------------------------*/
+
+/* 4K viewport (>1441px) */
+@media (min-width: 1441px) {
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
+    font-size: 0.95vw;
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+    font-size: 1.05vw;
+  }
+
+  .navbar-nav .btn-secondary{
+    font-size: 1.1vw;
+  }
+
+  .navbar-nav .btn-secondary:hover {
+    font-size: 1.2vw;
+  }
+}
+
+/* Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px) */
+@media (max-width: 1440px) and (min-width: 1200px){
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
+    font-size: 0.95vw;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+    font-size: 1.05vw;
+  }
+
+  .navbar-nav .btn-secondary{
+    font-size: 1.1vw;
+  }
+
+  .navbar-nav .btn-secondary:hover {
+    font-size: 1.2vw;
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 769px){
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
+    font-size: 0.95vw;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+    font-size: 1.05vw;
+  }
+
+  .navbar-nav .btn-secondary{
+    margin: 15px 0 0;  /* top right/left bottom */
+    font-size: 1.1vw;
+  }
+
+  .navbar-nav .btn-secondary:hover {
+    font-size: 1.2vw;
+  }
+
+  .navbar-toggler {
+    font-size: 2.5vw;
+  }
+}
+
+/* Tablet viewport (768px - 426px) */
+@media (max-device-width: 768px) and (min-device-width: 426px){
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
+    font-size: 1.4vw;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+    font-size: 1.5vw;
+  }
+
+  .navbar-nav .btn-secondary{
+    margin: 15px 0 0;  /* top right/left bottom */
+    font-size: 1.4vw;
+  }
+
+  .navbar-nav .btn-secondary:hover {
+    font-size: 1.6vw;
+  }
+
+  .navbar-toggler {
+    font-size: 3vw;
+  }
+}
+
+/* Mobile L viewport (425px - 376px) */
+@media (max-device-width: 425px) and (min-device-width: 376px) {
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
+    font-size: 2vw;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+    font-size: 2.1vw;
+  }
+
+  .navbar-nav .btn-secondary{
+    margin: 25px 0 0;  /* top right/left bottom */
+    font-size: 2vw;
+  }
+
+  .navbar-nav .btn-secondary:hover {
+    font-size: 2.1vw;
+  }
+
+  .navbar-toggler {
+    font-size: 5vw;
+  }
+}
+
+/* Mobile M viewport (375px - 321px) and Mobile S viewport (>320px) */
+@media (max-device-width: 375px) and (min-device-width: 0px) {
+  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
+    padding: 10px 2px 14px;  /* top right/left bottom */
+    font-size: 2vw;  /* (18px font-size / 2560px width */
+  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+    font-size: 2.1vw;
+  }
+
+  .navbar-nav .btn-secondary{
+    margin: 25px 0 0;  /* top right/left bottom */
+    font-size: 3vw;
+  }
+
+  .navbar-nav .btn-secondary:hover {
+    font-size: 3.1vw;
+  }
+
+  .navbar-toggler {
+    font-size: 5vw;
+  }
+}
+
+/*  */
+
+
 
 /*--------------------------------------------*/
 /* Navbar sideWipe animation */
