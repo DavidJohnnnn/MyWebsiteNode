@@ -26,40 +26,25 @@ CSS timing function tool: https://matthewlein.com/tools/ceaser
 
 */
 
+$mainWhite: #eeeeee;
+$mainBlack: #222831;
+$PrimaryColor: #00adb5;
+$SecondaryColor: #393e46;
+
+
 /*##################################################*/
 /* Tag Selectors */
 /*##################################################*/
 
 body {  /* Tag Selector */
-  background-color: #eeeeee;  /* Background of website */
+  background-color: $mainWhite;  /* Background of website */
   text-align: center;  /* Aligning all text to the left unless specified  except where necessary */
   font-family: 'Work Sans', sans-serif;
   margin: auto;
   max-width: 1440px;
 }
 
-/*##################################################*/
-/* Mouse Div Selectors */
-/*##################################################*/
 
-.mouseDiv {
-  text-align: left;
-  font-size: 0.7rem;
-  position: absolute;
-  z-index: 10;
-  transition: all 1000ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-/*--------------------------------------------*/
-/* mouse div size control */
-/*--------------------------------------------*/
-.mouseDiv-font0 {
-  height: 0;
-} .mouseDiv-fontNorm {
-  height: 100px;
-}
 
 /*##################################################*/
 /* Side Wipe Animation Selectors */
@@ -73,22 +58,28 @@ body {  /* Tag Selector */
   width: 100%;
   bottom: 0;
   margin: 0;
-} .sideWipeContainer .sideWipe1 {
-  height: 5px;
-  bottom: 0;
-  width: 25%;
-  position: absolute;
-  margin: 0;
-  background-color: #222831;
-  overflow: hidden;
-  display: inline-block;
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .sideWipeContainer .leftSideWipe {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  left: -27%;
-} .sideWipeContainer .rightSideWipe {
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  left: 126%;
+
+  .sideWipe1 {
+    height: 5px;
+    bottom: 0;
+    width: 25%;
+    position: absolute;
+    margin: 0;
+    background-color: $mainBlack;
+    overflow: hidden;
+    display: inline-block;
+    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  }
+
+  .leftSideWipe {
+    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+    left: -27%;
+  }
+
+  .rightSideWipe {
+    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+    left: 126%;
+  }
 }
 
 /*##################################################*/
@@ -98,25 +89,21 @@ body {  /* Tag Selector */
 .titleBar {
   padding: 0;
   overflow: hidden;
-}
 
-/*--------------------------------------------*/
-/* Page Title Stuff */
-/*--------------------------------------------*/
-
-.titleBar .container-fluid {
-  padding: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 4;
-  overflow: hidden;
+  .container-fluid {  // Page Title Stuff
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    overflow: hidden;
+  }
 }
 
 .navbar {
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-  background-color: #eeeeee!important;
+  background-color: $mainWhite!important;
 }
 
 /*--------------------------------------------*/
@@ -124,11 +111,11 @@ body {  /* Tag Selector */
 /*--------------------------------------------*/
 
 .myLogo {  /* Navbar Logo Class Selector */
-  color: #222831;
+  color: $mainBlack;
   font-size: 2rem;   /* (50px font-size / 2560px width */
   overflow: hidden;
 } .middleLine {
-  color: #ff2e63;
+  color: $SecondaryColor;
 } .textAlter {
   color: #ffffff;
 }
@@ -199,57 +186,57 @@ body {  /* Tag Selector */
 }
 
 .myLogo.offblink {
-  color: #222831;  /* This affects logo's first color*/
+  color: $mainBlack;  /* This affects logo's first color*/
   max-height: 0;
 }
 
 .myLogo.onLink {
   max-height: 100px;
-}
 
-.myLogo.onLink .textAlter {
-  text-shadow:
-  1px 0 #00adb5,
-  2px 0 #00adb5,
-  3px 0 #00adb5,
-  4px 0 #00adb5,
-  5px 0 #00adb5,
-  6px 0 #00adb5;
+  .textAlter {
+    text-shadow:
+    1px 0 $PrimaryColor,
+    2px 0 $PrimaryColor,
+    3px 0 $PrimaryColor,
+    4px 0 $PrimaryColor,
+    5px 0 $PrimaryColor,
+    6px 0 $PrimaryColor;
+  }
 }
 
 .myLogo.blink {
   max-height: 100px;
-  color: #eeeeee;
-}
+  color: $mainWhite;
 
-.myLogo.blink .title-A {
-  text-shadow:
-  1px 0 white,
-  2px 0 white,
-  3px 0 #222831,
-  4px 0 white,
-  5px 0 #222831,
-  6px 0 white,
-  7px 0 #222831,
-  8px 0 white;
-}
+  .title-A {
+    text-shadow:
+    1px 0 white,
+    2px 0 white,
+    3px 0 $mainBlack,
+    4px 0 white,
+    5px 0 $mainBlack,
+    6px 0 white,
+    7px 0 $mainBlack,
+    8px 0 white;
+  }
 
-.myLogo.blink .textAlter {
-  text-shadow:
-  1px 0 white,
-  2px 0 white,
-  3px 0 #00adb5,
-  4px 0 white,
-  5px 0 #00adb5,
-  6px 0 white,
-  7px 0 #00adb5,
-  8px 0 white,
-  9px 0 #00adb5,
-  10px 0 white,
-  11px 0 #00adb5,
-  12px 0 #00adb5,
-  13px 0 #00adb5,
-  14px 0 #00adb5;
+  .textAlter {
+    text-shadow:
+    1px 0 white,
+    2px 0 white,
+    3px 0 $PrimaryColor,
+    4px 0 white,
+    5px 0 $PrimaryColor,
+    6px 0 white,
+    7px 0 $PrimaryColor,
+    8px 0 white,
+    9px 0 $PrimaryColor,
+    10px 0 white,
+    11px 0 $PrimaryColor,
+    12px 0 $PrimaryColor,
+    13px 0 $PrimaryColor,
+    14px 0 $PrimaryColor;
+  }
 }
 
 /*--------------------------------------------*/
@@ -258,16 +245,16 @@ body {  /* Tag Selector */
 
 /* navbar links Basic Layout Section */
 .navbar-light .navbar-nav .nav-link {
-  color: #222831;
+  color: $mainBlack;
 }
 
 .navbar-light .navbar-nav .nav-link .fa-home{
-  color: #00adb5;
+  color: $PrimaryColor;
 }
 
 a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   transition: all 50ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  border: 0 #00adb5 solid;
+  border: 0 $PrimaryColor solid;
   border-width: 0;
 } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
   border-width: 1px 0;  /* top right bottom left */
@@ -278,7 +265,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 /*--------------------------------------------*/
 
 .titleBar li {
-  transition: all 3000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
+  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
   overflow: hidden;
   white-space: nowrap;
 }
@@ -291,18 +278,22 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   transform: rotateX(-360deg);
 }
 
-.navbar-nav .btn-secondary{
-  transition: all 500ms linear; /* custom */
-  color: white;
-  background-color: #00adb5;
-  border-color: white;
-  border-radius: 50%;
-}
-.navbar-nav .btn-secondary:hover {
-  color: #00adb5;
-  background-color: white;
-  border-color: #00adb5;
-  border-radius: 50%;
+.navbar-nav {
+
+  .btn-secondary{
+    transition: all 500ms linear; /* custom */
+    color: white;
+    background-color: $PrimaryColor;
+    border-color: white;
+    border-radius: 50%;
+  }
+
+  .btn-secondary:hover {
+    color: $PrimaryColor;
+    background-color: white;
+    border-color: $PrimaryColor;
+    border-radius: 50%;
+  }
 }
 
 /*--------------------------------------------*/
@@ -321,7 +312,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 .navbar-toggler.offblink {
   font-size: 0;
   transform: rotate(360deg);
-  color: #ff2e63;
+  color: $SecondaryColor;
 } .navbar-toggler.onLink {
   color: #08d9d6;
 } .navbar-toggler.onLink:hover {
@@ -334,57 +325,65 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 /* navbar links Responsive Section */
 /*--------------------------------------------*/
 
-/* 4K viewport (>1441px) */
+$hoverFactor: 1.09;
+
+// 4K viewport (>1441px)
 @media (min-width: 1441px) {
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
+  a.Links:link{  // Tag + Class Selector affecting the top side links.
+    padding: 10px 2px 14px;  // top right/left bottom
     font-size: 0.95vw;
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  } a.Links:hover {  // Class Selector: Color changes (both link box and text) when the mouse hovers over the link box
     font-size: 1.05vw;
   }
 
-  .navbar-nav .btn-secondary{
-    font-size: 1.1vw;
+
+  .navbar-nav {
+    .btn-secondary {
+      font-size: 1.1vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 1.1)vw;
+    }
   }
 
-  .navbar-nav .btn-secondary:hover {
-    font-size: 1.2vw;
-  }
 }
 
-/* Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px) */
+// Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px)
 @media (max-width: 1440px) and (min-width: 1200px){
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
-    font-size: 0.95vw;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  a.Links:link {
+    padding: 10px 2px 14px;
+    font-size: 0.95vw;
+  } a.Links:hover {
     font-size: 1.05vw;
   }
 
-  .navbar-nav .btn-secondary{
-    font-size: 1.1vw;
+  .navbar-nav {
+    .btn-secondary {
+      font-size: 1.1vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 1.1)vw;
+    }
   }
 
-  .navbar-nav .btn-secondary:hover {
-    font-size: 1.2vw;
-  }
 }
 
 @media (max-width: 1199px) and (min-width: 769px){
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
-    font-size: 0.95vw;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  a.Links:link {
+    padding: 10px 2px 14px;
+    font-size: 0.95vw;
+  } a.Links:hover {
     font-size: 1.05vw;
   }
 
-  .navbar-nav .btn-secondary{
-    margin: 15px 0 0;  /* top right/left bottom */
-    font-size: 1.1vw;
-  }
-
-  .navbar-nav .btn-secondary:hover {
-    font-size: 1.2vw;
+  .navbar-nav {
+    .btn-secondary {
+      margin: 15px 0 0;
+      font-size: 1.1vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 1.1)vw;
+    }
   }
 
   .navbar-toggler {
@@ -392,22 +391,23 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   }
 }
 
-/* Tablet viewport (768px - 426px) */
+// Tablet viewport (768px - 426px)
 @media (max-device-width: 768px) and (min-device-width: 426px){
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
-    font-size: 1.4vw;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  a.Links:link {
+    padding: 10px 2px 14px;
+    font-size: 1.4vw;
+  } a.Links:hover {
     font-size: 1.5vw;
   }
 
-  .navbar-nav .btn-secondary{
-    margin: 15px 0 0;  /* top right/left bottom */
-    font-size: 1.4vw;
-  }
-
-  .navbar-nav .btn-secondary:hover {
-    font-size: 1.6vw;
+  .navbar-nav {
+    .btn-secondary {
+      margin: 15px 0 0;
+      font-size: 1.4vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 1.4)vw;
+    }
   }
 
   .navbar-toggler {
@@ -415,22 +415,23 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   }
 }
 
-/* Mobile L viewport (425px - 376px) */
+// Mobile L viewport (425px - 376px)
 @media (max-device-width: 425px) and (min-device-width: 376px) {
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
-    font-size: 2vw;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
-    font-size: 2.1vw;
-  }
-
-  .navbar-nav .btn-secondary{
-    margin: 25px 0 0;  /* top right/left bottom */
+  a.Links:link {
+    padding: 10px 2px 14px;
     font-size: 2vw;
+  } a.Links:hover {
+    font-size: 2.1vw;
   }
 
-  .navbar-nav .btn-secondary:hover {
-    font-size: 2.1vw;
+  .navbar-nav {
+    .btn-secondary {
+      margin: 25px 0 0;
+      font-size: 2vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 2)vw;
+    }
   }
 
   .navbar-toggler {
@@ -438,30 +439,29 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   }
 }
 
-/* Mobile M viewport (375px - 321px) and Mobile S viewport (>320px) */
+// Mobile M viewport (375px - 321px) and Mobile S viewport (>320px)
 @media (max-device-width: 375px) and (min-device-width: 0px) {
-  a.Links:link{  /* Tag + Class Selector affecting the top side links. */
-    padding: 10px 2px 14px;  /* top right/left bottom */
-    font-size: 2vw;  /* (18px font-size / 2560px width */
-  } a.Links:hover {  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
+  a.Links:link {
+    padding: 10px 2px 14px;
+    font-size: 2vw;
+  } a.Links:hover {
     font-size: 2.1vw;
   }
 
-  .navbar-nav .btn-secondary{
-    margin: 25px 0 0;  /* top right/left bottom */
-    font-size: 3vw;
-  }
-
-  .navbar-nav .btn-secondary:hover {
-    font-size: 3.1vw;
+  .navbar-nav {
+    .btn-secondary {
+      margin: 25px 0 0;
+      font-size: 3vw;
+    }
+    .btn-secondary:hover {
+      font-size: ($hoverFactor * 3)vw;
+    }
   }
 
   .navbar-toggler {
     font-size: 5vw;
   }
 }
-
-/*  */
 
 
 
@@ -469,22 +469,26 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 /* Navbar sideWipe animation */
 /*--------------------------------------------*/
 
-.titleBar .sideWipe {
-  height: 5px;
-  bottom: 0;
-  width: 25%;
-  position: absolute;
-  margin: 0;
-  background-color: #222831;
-  overflow: hidden;
-  z-index: 4;
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
-} .titleBar .leftSideWipe {  /* When the bar is on the left side, we want it to switch to the right side instantly. */
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
-  left: -27%;
-} .titleBar .rightSideWipe {  /* Then the bar is on the right side, we want it to switch to the left side slowly. */
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  left: 126%;
+.titleBar {
+  .sideWipe {
+    height: 5px;
+    bottom: 0;
+    width: 25%;
+    position: absolute;
+    margin: 0;
+    background-color: $mainBlack;
+    overflow: hidden;
+    z-index: 4;
+    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+  }
+  .leftSideWipe {  // When the bar is on the left side, we want it to switch to the right side instantly.
+    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+    left: -27%;
+  }
+  .rightSideWipe {  // Then the bar is on the right side, we want it to switch to the left side slowly.
+    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); // custom
+    left: 126%;
+  }
 }
 
 /*##################################################*/
@@ -493,11 +497,11 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 
 .lgContainerDiv {  /* Class Selector: Outer Div containing Purpose text boxes */
   margin: 0 auto;
-}
 
-.lgContainerDiv .container-fluid {
-  height: 35rem;
-  padding: 0;
+  .container-fluid {
+    height: 35rem;
+    padding: 0;
+  }
 }
 
 .noFilt {
@@ -524,212 +528,13 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   }
 }
 
-/*##################################################*/
-/* Unique Div: RevealCard Div */
-/*##################################################*/
 
-.RevealCard {
-  overflow-x: hidden;
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
+// ################################################## //
+// Unique Div: RevealCard Div //
+// ################################################## //
 
-.RevealCard .Title {
-  overflow: hidden;
-}
+@import 'revealCard';
 
-.RevealCard .sideWipe1 {
-  height: 6px;
-  top: 0;
-  width: 25%;
-  position: absolute;
-  margin: 0;
-  background-color: #08d9d6;
-  overflow: hidden;
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .RevealCard .sideWipe2 {
-  height: 6px;
-  bottom: 0;
-  width: 25%;
-  position: absolute;
-  margin: 0;
-  background-color: #08d9d6;
-  overflow: hidden;
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .RevealCard .leftSideWipe {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  left: -27%;
-} .RevealCard .rightSideWipe {
-  transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  left: 126%;
-}
-
-.RevealCard .vertWipe {
-  height: 300px;
-  width: 5px;
-  position: relative;
-  margin: 0;
-  background-color: #08d9d6;
-} .RevealCard .upVertWipe {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  top: -300px;
-} .RevealCard .downVertWipe {
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  top: 600px;
-} .RevealCard .upVertWipe1 {
-  transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  top: -300px;
-} .RevealCard .downVertWipe1 {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-  top: 600px;
-}
-
-.RevealCard .verticalLine {
-  background-color: #222831;
-  position: relative;
-  height: 300px;
-  width: 10px;
-  top: 0;
-  margin: auto;
-  overflow: hidden;
-} .RevealCard .verticalLine2 {
-  background-color: #222831;
-  position: relative;
-  height: 300px;
-  width: 10px;
-  bottom: 0;
-  margin: auto;
-  overflow: hidden;
-}
-
-.RevealCard .container-fluid {
-  margin: 9% auto;  /* top/bottom right/left */
-  width: 60%;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.RevealCard .container-fluid .card {
-  border: 0;
-  border-top: 10px solid #222831;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.RevealCard .container-fluid .card-title {
-  padding: 10px 0;
-  margin: 0;
-  max-height: auto;
-  color: #393e46;
-  background-color: #eeeeee;
-  font-size: 9.375rem;
-  font-weight: 100;
-  text-shadow: 2px 2px #00adb5;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.RevealCard .cardSec:hover .card-title {
-  color: #00adb5;
-  text-shadow:
-    2px 2px #393e46,
-    3px 3px #393e46,
-    4px 4px #393e46;
-}
-
-.RevealCard .container-fluid .card.Text {
-  max-height: 1000px;
-  color: #eeeeee;
-  background-color: #00adb5;
-}
-
-.RevealCard .container-fluid .card .fas.fa-plus {
-  padding: 10px 0;
-  font-size: 1rem;
-  overflow: hidden;
-  max-height: 10000px;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.RevealCard .container-fluid .card .card-text {
-  max-height: 0;
-  padding: 0 20px;
-  font-size: 1.45rem;
-  overflow: hidden;
-  text-align: left;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.RevealCard .container-fluid .card .card-text small {
-  display: block;
-  font-size: 0.9rem;
-  line-height: 1.75;
-}
-
-.RevealCard .container-fluid .card .card-text .btn {
-  font-size: 0.8rem;
-}
-
-.RevealCard .container-fluid .card .fas.fa-plus.plusHide {
-  max-height: 0;
-  padding: 0;
-  font-size: 0;
-  background-color: #eeeeee;
-  border-bottom: 0 solid #393e46;
-} .RevealCard .container-fluid .card .card-text.textReveal {
-  max-height: 1000px;
-  padding: 25px 20px;
-  color: #393e46;
-  background-color: #eeeeee;
-  border-bottom: 10px solid #393e46;
-}
-
-@media (max-width: 1199px) {
-  .RevealCard .container-fluid .card-title {
-    font-size: 8.375rem;
-  }
-
-  .RevealCard .container-fluid .card .fas.fa-plus {
-    font-size: 1rem;
-  }
-
-  .RevealCard .container-fluid .card .card-text {
-    font-size: 1.35rem;
-  }
-} @media (max-width: 991px) {
-  .RevealCard .container-fluid .card-title {
-    font-size: 7.375rem;
-  }
-
-  .RevealCard .container-fluid .card .fas.fa-plus {
-    font-size: 0.8rem;
-  }
-
-  .RevealCard .container-fluid .card .card-text {
-    font-size: 1.3rem;
-  }
-} @media (max-width: 767px) {
-  .RevealCard .container-fluid .card-title {
-    font-size: 5.375rem;
-  }
-
-  .RevealCard .container-fluid .card .fas.fa-plus {
-    font-size: 0.65rem;
-  }
-
-  .RevealCard .container-fluid .card .card-text {
-    font-size: 1.2rem;
-  }
-} @media (max-width: 575px) {
-  .RevealCard .container-fluid .card-title {
-    font-size: 4.375rem;
-  }
-
-  .RevealCard .container-fluid .card .fas.fa-plus {
-    font-size: 0.5rem;
-  }
-
-  .RevealCard .container-fluid .card .card-text {
-    font-size: 1.1rem;
-  }
-}
 
 /*##################################################*/
 /* Unique Div: Large Image Container Div (index.html) */
@@ -738,34 +543,39 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 /*--------------------------------------------*/
 /* Large Image Container Div specific animation */
 /*--------------------------------------------*/
-.IndexLgContainer .lgContainerInit {
-  background-image: url("001_IndexImages/MountainMosaic4.jpg");
-  background-size: 100% 120%;
-  background-position: right bottom;
-  background-attachment: fixed;
-  filter: brightness(50%);
-  border-radius: 50%;
+.IndexLgContainer {
+  .lgContainerInit {
+    background: {
+      image: url("../images/001_IndexImages/MountainMosaic4.jpg");
+      size: 100% 120%;
+      position: right bottom;
+      attachment: fixed;
+    }
+    filter: brightness(50%);
+    border-radius: 50%;
+  }
+  .lgContainerFinal {
+    background: {
+      image: url("../images/001_IndexImages/MountainMosaic4.jpg");
+      size: 100% 120%;
+      position: top 0%;
+      attachment: fixed;
+    }
+    filter: brightness(100%);
+    border-radius: 0%;
+  }
+  .transition1 {
+    transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+  }
+  .transition2 {
+    transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease;
+  }
 }
 
-.IndexLgContainer .lgContainerFinal {
-  background-image: url("001_IndexImages/MountainMosaic4.jpg");
-  background-size: 100% 120%;
-  background-position: top 0%;
-  background-attachment: fixed;
-  filter: brightness(100%);
-  border-radius: 0%;
-}
-
-.IndexLgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .IndexLgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
-}
-
-/*--------------------------------------------*/
-/* indexQuote parallax quote  */
-/*--------------------------------------------*/
-.indexQuote {  /* Original formatting of the indexQuote (adjusting the card's default formatting */
+//--------------------------------------------//
+// indexQuote parallax quote  //
+//--------------------------------------------//
+.indexQuote {  // Original formatting of the indexQuote (adjusting the card's default formatting
   border: none;
   background-color: transparent;
   overflow: hidden;
@@ -775,6 +585,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   top: 50%;
   left: 3%;
   z-index: 2;
+  padding-top: 30px;
 }
 
 .indexQuote.qtextShadow a {
@@ -799,104 +610,65 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   font-size: 6rem;
 }
 
-/* The normal text shadow */
+// The normal text shadow
 .indexQuote.qtextShadow {
-  color: #222831;
-  text-shadow:
-    1px 1px #00adb5,
-    2px 2px #00adb5,
-    3px 3px #00adb5,
-    4px 4px #00adb5,
-    5px 5px #00adb5,
-    6px 6px #00adb5,
-    7px 7px #00adb5,
-    8px 8px #00adb5,
-    9px 9px #00adb5,
-    10px 10px #00adb5,
-    11px 11px #222831,
-    12px 12px #222831,
-    13px 13px #222831,
-    14px 14px #222831
-  ;
+  color: $mainBlack;
+  $shadows: ();
+  @for $i from 1 through 14 {
+    $temp: $i + px;
+    @if $i >= 11 {
+      $ithShadow: $temp $temp $mainBlack;
+      $shadows: append($shadows, $ithShadow, comma)
+    } @else {
+      $ithShadow: $temp $temp $PrimaryColor;
+      $shadows: append($shadows, $ithShadow, comma)
+    }
+  }
+  text-shadow: $shadows;
 }
 
-/* The hover text shadow */
+// The hover text shadow
 .indexQuote.qtextShadowHover {
-  color: #00adb5;
-  text-shadow:
-    /*1px 0 0px #eeeeee,
-    2px 0 0px #eeeeee,
-    3px 0 0px #eeeeee,
-    4px 0 0px #eeeeee,
-    5px 0 0px #eeeeee,
-    6px 0 0px #eeeeee,
-    7px 0 0px #eeeeee,
-    8px 0 0px #eeeeee,
-    9px 0 0px #eeeeee,
-    10px 0 0px #eeeeee,
-    11px 0 0px #eeeeee,
-    12px 0 0px #eeeeee,
-    13px 0 0px #eeeeee,
-    14px 0 0px #eeeeee,
-    15px 0 0px #eeeeee,
-    16px 0 0px #eeeeee,
-    17px 0 0px #eeeeee,
-    18px 0 0px #eeeeee,
-    19px 0 0px #eeeeee,
-    20px 0 0px #00adb5,
-    21px 0 0px #222831,
-    22px 0 0px #00adb5,
-    23px 0 8px #222831,
-    24px 0 0px #00adb5,
-    25px 0 0px #222831,
-    26px 0 0px #00adb5,
-    27px 0 0px #222831,
-    28px 0 0px #00adb5,
-    29px 0 0px #222831,
-    30px 0 0px #00adb5,
-    31px 0 0px #222831,
-    32px 0 0px #00adb5,
-    33px 0 0px #222831,
-    34px 0 0px #00adb5,
-    35px 0 0px #222831,
-    36px 0 0px #00adb5,
-    37px 0 0px #222831,
-    38px 0 0px #00adb5,
-    39px 0 0px #222831*/
+  color: $PrimaryColor;
 
-    1px -1px 0px #00adb5,
-    2px -2px 0px #00adb5,
-    3px -3px 0px #00adb5,
-    4px -4px 0px #00adb5,
-    5px -5px 0px #00adb5,
-    6px -6px 0px #00adb5,
-    7px -7px 0px #00adb5,
-    8px -8px 0px #00adb5,
-    9px -9px 0px #00adb5,
-    10px -10px 0px #222831,
-    11px -11px 0px #00adb5,
-    12px -12px 0px #222831,
-    13px -13px 0px #00adb5,
-    14px -14px 0px #222831,
-    15px -15px 0px #00adb5,
-    16px -16px 0px #222831,
-    17px -17px 0px #00adb5,
-    18px -18px 0px #222831,
-    19px -19px 0px #00adb5,
-    20px -20px 0px #222831,
-    21px -21px 0px #00adb5,
-    22px -22px 0px #222831,
-    23px -23px 8px #00adb5,
-    24px -24px 0px #222831,
-    25px -25px 0px #00adb5,
-    26px -26px 0px #222831,
-    27px -27px 0px #00adb5,
-    28px -28px 0px #222831
-  ;
+  $shadows: ();
+  @for $i from 1 through 28 {
+    $temp: $i + px;
+    $nTemp: - + $i + px;
+
+    @if $i >= 10 {
+      @if $i % 2 == 0 {
+        $ithShadow: $temp $nTemp $mainBlack;
+        $shadows: append($shadows, $ithShadow, comma)
+      }
+      @else {
+        $ithShadow: $temp $nTemp $PrimaryColor;
+        $shadows: append($shadows, $ithShadow, comma)
+      }
+    }
+    @else {
+      $ithShadow: $temp $nTemp $PrimaryColor;
+      $shadows: append($shadows, $ithShadow, comma)
+    }
+  }
+
+  text-shadow: $shadows;
 }
 
-/* IndexQuote Container Responsive Section */
+// IndexQuote Container Responsive Section
 @media (min-width: 1441px) {
+  .indexQuote.displayQuote {
+    max-height: 1000px;
+    .card-title {
+      font-size: 8rem;
+    }
+  } .indexQuote.displayNone {
+    max-height: 0;
+    .card-title {
+      font-size: 0;
+    }
+    transform: translate3d(100px, 0, 100px) rotateX(45deg) rotateZ(-30deg);
+  }
   .indexQuote .card-title {
     font-size: 8rem;
   }
@@ -904,7 +676,8 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   .indexQuote {
     right: 5%;
   }
-} @media (max-width: 1199px) {
+}
+@media (max-width: 1199px) {
   .indexQuote .card-title {
     font-size: 3.8rem;
   }
@@ -912,9 +685,11 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   .indexQuote {
     right: 5%;
   }
-} @media (max-width: 991px) {
+}
+@media (max-width: 991px) {
 
-} @media (max-width: 767px) {
+}
+@media (max-width: 767px) {
   .indexQuote .card-title {
     font-size: 2.5rem;
   }
@@ -922,7 +697,8 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   .indexQuote {
     right: 10%;
   }
-} @media (max-width: 575px) {
+}
+@media (max-width: 575px) {
   .indexQuote .card-title {
     font-size: 1.2rem;
   }
@@ -932,11 +708,22 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   }
 }
 
-/* These handle the indexQuote animation when the page opens */
+.indexQuote .card-title {
+  font-size: 6rem;
+}
+
+// These handle the indexQuote animation when the page opens //
 .indexQuote.displayQuote {
   max-height: 1000px;
-} .indexQuote.displayNone {
+  card-title {
+    font-size: 6rem;
+  }
+}
+.indexQuote.displayNone {
   max-height: 0;
+  card-title {
+    font-size: 0;
+  }
   transform: translate3d(100px, 0, 100px) rotateX(45deg) rotateZ(-30deg);
 }
 
@@ -954,13 +741,13 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 .TwoColSec .ColSide {
   background-color: white;
   height: auto;
-  border-color: #eeeeee;
+  border-color: $mainWhite;
 }
 
 .TwoColSec .LeftColSide {
   white-space: normal;
   text-align: left;
-  color: #222831;
+  color: $mainBlack;
   margin: 0;
   padding: 7% 35% 15% 5%;
   font-size: 2.2rem;
@@ -972,7 +759,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
   white-space: normal;
   text-align: left;
   margin: 0;
-  color: #222831;
+  color: $mainBlack;
   padding: 7% 7% 30% 6%;
   font-size: 1.4rem;
   transition: all 0ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
@@ -992,12 +779,12 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .FeaturedImgIndex {
-  background-image: url("001_IndexImages/Abstract1Filt3.jpg");
+  background-image: url("../images/001_IndexImages/Abstract1Filt3.jpg");
 }
 
 .FeaturedTextDiv .FeatPgh {
   margin: 10% 25% 2% 10%;
-  color: #00adb5;
+  color: $PrimaryColor;
   line-height: 25px;
   text-align: left;
   font-size: 2rem;
@@ -1015,7 +802,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .FeaturedTextDiv .btn {
-  color: #222831!important;
+  color: $mainBlack!important;
 }
 
 @media (max-width: 767px) {
@@ -1036,40 +823,40 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
     .bottomBox {
       margin-top: 100px;
       vertical-align: bottom;
-      color: #eeeeee;
+      color: $mainWhite;
     }
 
     .bottomDiv {
       padding: 3% 8%;  /* top/bottom left/right */
       margin: 0;
       height: auto;
-      background-color: #222831;
+      background-color: $mainBlack;
       font-size: 1rem;  /* (18px font-size / 2560px width */
       text-decoration: none;
     }
 
     .bottomDiv {
       text-align: right;
-      color: #eeeeee;
+      color: $mainWhite;
     }
 
     .bottomDiv .col-sm-2 {
-      color: #eeeeee;
+      color: $mainWhite;
     }
 
     .bottomLink {
-      color: #eeeeee;
+      color: $mainWhite;
       text-decoration: none;
       transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
     }
 
     .bottomLink:hover {
       text-decoration: none;
-      color: #ff2e63;
+      color: $SecondaryColor;
     }
 
     .socialLink {
-      color: #eeeeee;
+      color: $mainWhite;
       text-decoration: none;
       padding: 8px;
       border-style: none;
@@ -1089,7 +876,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
     .copyrightText {
       margin-top: 25px;
       margin-bottom: 25px;
-      color: #eeeeee;
+      color: $mainWhite;
       font-size: 1rem;
       text-align: left;
     }
@@ -1101,12 +888,12 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
     }
 
     .middleLine_bottom {
-      color: #ff2e63;
+      color: $SecondaryColor;
     }
 
     .textAlter_bottom {
       text-decoration: underline;
-      color: #eeeeee;
+      color: $mainWhite;
     }
 
     @media (max-width: 1023px) {
@@ -1137,7 +924,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg2LgContainer .lgContainerInit {
-  background-image: url("002_Images/spaceImage4.jpg");
+  background-image: url("../images/002_Images/spaceImage4.jpg");
   background-size: 100% 112%;
   background-position: center bottom;
   background-attachment: fixed;
@@ -1146,7 +933,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg2LgContainer .lgContainerFinal {
-  background-image: url("002_Images/spaceImage4.jpg");
+  background-image: url("../images/002_Images/spaceImage4.jpg");
   background-size: 100% 112%;
   background-position: center 0%;
   background-attachment: fixed;
@@ -1205,52 +992,52 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 
 .pg2LgContainer .boxShadowExp {
   box-shadow:
-    1px 1px #00adb5,
-    2px 2px #eeeeee,
-    3px 3px #00adb5,
-    4px 4px #eeeeee,
-    5px 5px #00adb5,
-    6px 6px #eeeeee,
-    7px 7px #00adb5,
-    8px 8px #eeeeee,
-    9px 9px #00adb5,
-    10px 10px #eeeeee,
-    11px 11px #00adb5,
-    12px 12px #eeeeee,
-    13px 13px #00adb5,
-    14px 14px #eeeeee,
-    15px 15px #00adb5,
-    16px 16px #eeeeee,
-    17px 17px #00adb5,
-    18px 18px #eeeeee,
-    19px 19px #00adb5,
-    20px 20px #eeeeee,
-    21px 21px #00adb5,
-    22px 22px #eeeeee,
-    23px 23px #00adb5,
-    24px 24px #eeeeee,
-    25px 25px #00adb5,
-    26px 26px #eeeeee,
-    27px 27px #00adb5,
-    28px 28px #eeeeee,
-    29px 29px #00adb5,
-    30px 30px #eeeeee,
-    31px 31px #00adb5,
-    32px 32px #eeeeee,
-    33px 33px #00adb5,
-    34px 34px #eeeeee,
-    35px 35px #00adb5,
-    36px 36px #eeeeee,
-    37px 37px #00adb5,
-    38px 38px #eeeeee,
-    39px 39px #00adb5;
+    1px 1px $PrimaryColor,
+    2px 2px $mainWhite,
+    3px 3px $PrimaryColor,
+    4px 4px $mainWhite,
+    5px 5px $PrimaryColor,
+    6px 6px $mainWhite,
+    7px 7px $PrimaryColor,
+    8px 8px $mainWhite,
+    9px 9px $PrimaryColor,
+    10px 10px $mainWhite,
+    11px 11px $PrimaryColor,
+    12px 12px $mainWhite,
+    13px 13px $PrimaryColor,
+    14px 14px $mainWhite,
+    15px 15px $PrimaryColor,
+    16px 16px $mainWhite,
+    17px 17px $PrimaryColor,
+    18px 18px $mainWhite,
+    19px 19px $PrimaryColor,
+    20px 20px $mainWhite,
+    21px 21px $PrimaryColor,
+    22px 22px $mainWhite,
+    23px 23px $PrimaryColor,
+    24px 24px $mainWhite,
+    25px 25px $PrimaryColor,
+    26px 26px $mainWhite,
+    27px 27px $PrimaryColor,
+    28px 28px $mainWhite,
+    29px 29px $PrimaryColor,
+    30px 30px $mainWhite,
+    31px 31px $PrimaryColor,
+    32px 32px $mainWhite,
+    33px 33px $PrimaryColor,
+    34px 34px $mainWhite,
+    35px 35px $PrimaryColor,
+    36px 36px $mainWhite,
+    37px 37px $PrimaryColor,
+    38px 38px $mainWhite,
+    39px 39px $PrimaryColor;
 }
 
 .pg2LgContainer .qtextShadowHover {
   color: crimson;
   text-shadow:
-    1px 1px #eeeeee,
-    2px 2px #eeeeee,
+    1px 1px $mainWhite,
+    2px 2px $mainWhite,
     3px 3px #000000,
     4px 4px #000000,
     5px 5px #000000
@@ -1409,7 +1196,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg3LgContainer .lgContainerInit {
-  background-image: url("003_Images/FlowerMod5.jpg");
+  background-image: url("../images/003_Images/FlowerMod5.jpg");
   background-size: 100% 159%;
   background-attachment: fixed;
   background-position: bottom;
@@ -1418,7 +1205,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg3LgContainer .lgContainerFinal {
-  background-image: url("003_Images/FlowerMod5.jpg");
+  background-image: url("../images/003_Images/FlowerMod5.jpg");
   background-size: 100% 159%;
   background-attachment: fixed;
   background-position: center right;
@@ -1442,28 +1229,28 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .FeaturedUsers.First {
-  background-image: url("003_Images/TreesMod.jpg");
+  background-image: url("../images/003_Images/TreesMod.jpg");
 }
 
 .FeaturedUsers.Second {
-  background-image: url("003_Images/carousel2_1.jpg");
+  background-image: url("../images/003_Images/carousel2_1.jpg");
 }
 
 .FeaturedUsers.Third {
-  background-image: url("003_Images/Carousel3.jpg");
+  background-image: url("../images/003_Images/Carousel3.jpg");
   background-position: center;
 }
 
 .FeatTitleUsers {
   text-shadow:
-    2px 2px #eeeeee,
-    3px 3px #eeeeee,
-    4px 4px #eeeeee,
-    5px 5px #eeeeee,
-    6px 6px #eeeeee,
-    7px 7px #222831,
-    8px 8px #eeeeee;
-  color: #222831;
+    2px 2px $mainWhite,
+    3px 3px $mainWhite,
+    4px 4px $mainWhite,
+    5px 5px $mainWhite,
+    6px 6px $mainWhite,
+    7px 7px $mainBlack,
+    8px 8px $mainWhite;
+  color: $mainBlack;
   margin-top: 100px;
   font-size: 5.375rem;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);  /* transition: all 0.75s ease-out; */
@@ -1472,7 +1259,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 .FeatPghUsers {
   margin: 25px 100px 10px;
   color: #252a34;
-  text-shadow: 1px 1px #ff2e63;
+  text-shadow: 1px 1px $SecondaryColor;
   line-height: 25px;
   font-size: 1.75rem;
   background-color: rgba(255, 255, 255, 1);
@@ -1519,17 +1306,16 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg4LgContainer .lgContainerInit {
-  background-image: url("004_Images/NatureNew.jpg");
+  background-image: url("../images/004_Images/NatureNew.jpg");
   background-size: 1000% 1000%;
   background-position: top left;
   filter: contrast(1000%) brightness(75%) saturate(50%) hue-rotate(180deg) rotate(720deg);
   background-attachment: fixed;
-  back
   border-radius: 50%;
 }
 
 .pg4LgContainer .lgContainerFinal {
-  background-image: url("004_Images/NatureNew1.jpg");
+  background-image: url("../images/004_Images/NatureNew1.jpg");
   background-size: 120% 191%;
   background-position: bottom center;
   filter: contrast(100%) brightness(100%) saturate(100%) hue-rotate(0deg) rotate(0deg);
@@ -1599,7 +1385,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg6LgContainer .lgContainerInit {
-  background-image: url('006-Images/ProfilePic1.jpg');
+  background-image: url('../images/006-Images/ProfilePic1.jpg');
   background-size: 4%;
   background-position: top;
   filter: contrast(100%) brightness(100%) saturate(100%) blur(10px);
@@ -1607,7 +1393,7 @@ a.Links:link{  /* Tag + Class Selector affecting the top side links. */
 }
 
 .pg6LgContainer .lgContainerFinal {
-  background-image: url('006-Images/ProfilePic1.jpg');
+  background-image: url('../images/006-Images/ProfilePic1.jpg');
   background-size: 20%;
   background-position: center;
   background-blend-mode: lighten;
