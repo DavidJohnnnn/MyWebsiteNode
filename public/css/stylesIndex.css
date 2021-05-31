@@ -8,9 +8,6 @@ max-screen-height: 789px
 
 CSS timing function tool: https://matthewlein.com/tools/ceaser
 
-*/
-/*
-
   Main Color Scheme:
   #eaeaea - white
   #ff2e63 - red
@@ -132,61 +129,38 @@ body {
   border-bottom: 1px gainsboro solid;
 }
 
-/*--------------------------------------------*/
-/* navbar Logo Responsive Section */
-/*--------------------------------------------*/
-/* 4K viewport (>1441px) */
 @media (min-width: 1441px) {
   .myLogo {
-    /* Tag + Class Selector affecting the top side links. */
     font-size: 2.5vw;
-    /* (50px font-size / 2560px width */
   }
 }
-/* Laptop L viewport (1440px - 1025px) and Laptop viewport (1024px - 769px) */
 @media (max-width: 1440px) and (min-width: 769px) {
   .myLogo {
-    /* Tag + Class Selector affecting the top side links. */
     font-size: 2vw;
-    /* (18px font-size / 2560px width */
   }
 }
-/* Tablet viewport (768px - 426px) */
 @media (max-device-width: 768px) and (min-device-width: 426px) {
   .myLogo {
-    /* Tag + Class Selector affecting the top side links. */
     font-size: 3vw;
-    /* (18px font-size / 2560px width */
   }
 }
-/* Mobile L viewport (425px - 376px) */
 @media (max-device-width: 425px) and (min-device-width: 376px) {
   .myLogo {
-    /* Tag + Class Selector affecting the top side links. */
     font-size: 5vw;
-    /* (18px font-size / 2560px width */
   }
 }
-/* Mobile M viewport (375px - 321px) and Mobile S viewport (>320px) */
 @media (max-device-width: 375px) and (min-device-width: 0px) {
   .myLogo {
-    /* Tag + Class Selector affecting the top side links. */
     font-size: 6vw;
-    /* (18px font-size / 2560px width */
   }
 }
-/*  */
-/*--------------------------------------------*/
-/* navbar Logo Animation */
-/*--------------------------------------------*/
+
 .title-A, .textAlter {
-  transition: all 750ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
+  transition: all 2500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 .myLogo.offblink {
   color: #222831;
-  /* This affects logo's first color*/
   max-height: 0;
 }
 
@@ -199,19 +173,15 @@ body {
 
 .myLogo.blink {
   max-height: 100px;
-  color: #eeeeee;
+  color: #393e46;
 }
 .myLogo.blink .title-A {
-  text-shadow: 1px 0 white, 2px 0 white, 3px 0 #222831, 4px 0 white, 5px 0 #222831, 6px 0 white, 7px 0 #222831, 8px 0 white;
+  text-shadow: 1px 0 white, 2px 0 white, 3px 0 #00adb5, 4px 0 white, 5px 0 #00adb5, 6px 0 white, 7px 0 #00adb5, 8px 0 white;
 }
 .myLogo.blink .textAlter {
-  text-shadow: 1px 0 white, 2px 0 white, 3px 0 #00adb5, 4px 0 white, 5px 0 #00adb5, 6px 0 white, 7px 0 #00adb5, 8px 0 white, 9px 0 #00adb5, 10px 0 white, 11px 0 #00adb5, 12px 0 #00adb5, 13px 0 #00adb5, 14px 0 #00adb5;
+  text-shadow: 1px 0 #00adb5, 2px 0 #00adb5, 3px 0 #393e46, 4px 0 white, 5px 0 #393e46, 6px 0 #00adb5, 7px 0 #00adb5, 8px 0 #00adb5, 9px 0 #00adb5;
 }
 
-/*--------------------------------------------*/
-/* Links */
-/*--------------------------------------------*/
-/* navbar links Basic Layout Section */
 .navbar-light .navbar-nav .nav-link {
   color: #222831;
 }
@@ -221,25 +191,20 @@ body {
 }
 
 a.Links:link {
-  /* Tag + Class Selector affecting the top side links. */
-  transition: all 50ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
   border: 0 #00adb5 solid;
   border-width: 0;
+  transition: all 500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
 a.Links:hover {
-  /* Class Selector: Color changes (both link box and text) when the mouse hovers over the link box */
   border-width: 1px 0;
-  /* top right bottom left */
 }
 
 /*--------------------------------------------*/
 /* navbar Links animation */
 /*--------------------------------------------*/
 .titleBar li {
-  transition: all 4000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
+  transition: all 6000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
   overflow: hidden;
   white-space: nowrap;
 }
@@ -256,7 +221,6 @@ a.Links:hover {
 
 .navbar-nav .btn-secondary {
   transition: all 500ms linear;
-  /* custom */
   color: white;
   background-color: #00adb5;
   border-color: white;
@@ -277,7 +241,6 @@ a.Links:hover {
   border-radius: 50px;
   overflow: hidden;
   transition: all 750ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
 }
 
 .navbar-toggler:hover {
@@ -467,29 +430,6 @@ a.Links:hover {
   filter: hue-rotate(90deg);
 }
 
-/*--------------------------------------------*/
-/* Large Image Container animation  */
-/*--------------------------------------------*/
-/* The basic transition animation speeds */
-.transition1 {
-  transition: all 3000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
-}
-
-/* Large Image Container Responsive Section */
-@media (min-width: 1441px) {
-  .lgContainerDiv .container-fluid {
-    height: 55rem;
-  }
-}
-/*##################################################*/
-/* Unique Div: RevealCard Div */
-/*##################################################*/
 .RevealCard {
   overflow-x: hidden;
   margin-top: 25px;
@@ -510,7 +450,7 @@ a.Links:hover {
 }
 .RevealCard .sideWipe2 {
   height: 6px;
-  bottom: 0;
+  top: 0;
   width: 25%;
   position: absolute;
   margin: 0;
@@ -563,19 +503,19 @@ a.Links:hover {
   position: relative;
   height: 300px;
   width: 10px;
-  bottom: 0;
+  top: 0;
   margin: auto;
   overflow: hidden;
 }
 .RevealCard .container-fluid {
   margin: 9% auto;
   width: 60%;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .RevealCard .container-fluid .card {
   border: 0;
   border-top: 10px solid #222831;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .RevealCard .container-fluid .card-title {
   padding: 10px 0;
@@ -586,7 +526,7 @@ a.Links:hover {
   font-size: 9.375rem;
   font-weight: 100;
   text-shadow: 2px 2px #00adb5;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .RevealCard .container-fluid .card.Text {
   max-height: 1000px;
@@ -598,7 +538,7 @@ a.Links:hover {
   font-size: 1rem;
   overflow: hidden;
   max-height: 10000px;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .RevealCard .container-fluid .card .fas.fa-plus.plusHide {
   max-height: 0;
@@ -620,7 +560,7 @@ a.Links:hover {
   font-size: 1.45rem;
   overflow: hidden;
   text-align: left;
-  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 .RevealCard .container-fluid .card .card-text small {
   display: block;
@@ -634,57 +574,73 @@ a.Links:hover {
   color: #00adb5;
   text-shadow: 2px 2px #222831, 3px 3px #222831, 4px 4px #222831;
 }
-
 @media (max-width: 1199px) {
-  .RevealCard .container-fluid .card-title {
+  .RevealCard .container .card-title {
     font-size: 8.375rem;
   }
-  .RevealCard .container-fluid .card .fas.fa-plus {
+  .RevealCard .container .card .fas.fa-plus {
     font-size: 1rem;
   }
-  .RevealCard .container-fluid .card .card-text {
+  .RevealCard .container .card .card-text {
     font-size: 1.35rem;
   }
 }
 @media (max-width: 991px) {
-  .RevealCard .container-fluid .card-title {
+  .RevealCard .container .card-title {
     font-size: 7.375rem;
   }
-  .RevealCard .container-fluid .card .fas.fa-plus {
+  .RevealCard .container .card .fas.fa-plus {
     font-size: 0.8rem;
   }
-  .RevealCard .container-fluid .card .card-text {
+  .RevealCard .container .card .card-text {
     font-size: 1.3rem;
   }
 }
 @media (max-width: 767px) {
-  .RevealCard .container-fluid .card-title {
+  .RevealCard .container .card-title {
     font-size: 5.375rem;
   }
-  .RevealCard .container-fluid .card .fas.fa-plus {
+  .RevealCard .container .card .fas.fa-plus {
     font-size: 0.65rem;
   }
-  .RevealCard .container-fluid .card .card-text {
+  .RevealCard .container .card .card-text {
     font-size: 1.2rem;
   }
 }
 @media (max-width: 575px) {
-  .RevealCard .container-fluid .card-title {
+  .RevealCard .container .card-title {
     font-size: 4.375rem;
   }
-  .RevealCard .container-fluid .card .fas.fa-plus {
+  .RevealCard .container .card .fas.fa-plus {
     font-size: 0.5rem;
   }
-  .RevealCard .container-fluid .card .card-text {
+  .RevealCard .container .card .card-text {
     font-size: 1.1rem;
   }
 }
+
 /*##################################################*/
 /* Unique Div: Large Image Container Div (index.html) */
 /*##################################################*/
 /*--------------------------------------------*/
-/* Large Image Container Div specific animation */
+/* Large Image Container animation  */
 /*--------------------------------------------*/
+.transition1 {
+  transition: all 3000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
+  /* custom */
+}
+
+.transition2 {
+  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
+  /* custom */
+}
+
+/* Large Image Container Responsive Section */
+@media (min-width: 1441px) {
+  .lgContainerDiv .container-fluid {
+    height: 55rem;
+  }
+}
 .IndexLgContainer .lgContainerInit {
   background-image: url("../images/001_IndexImages/MountainMosaic4.jpg");
   background-size: 100% 120%;
@@ -706,6 +662,141 @@ a.Links:hover {
 }
 .IndexLgContainer .transition2 {
   transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
+}
+
+.lgContainerDiv {
+  margin: 100px auto;
+}
+
+.pg2LgContainer .lgContainerInit {
+  background-image: url("../images/002_Images/spaceImage4.jpg");
+  background-size: 100% 112%;
+  background-position: center bottom;
+  background-attachment: fixed;
+  filter: brightness(80%);
+  border-radius: 50%;
+}
+.pg2LgContainer .lgContainerFinal {
+  background-image: url("../images/002_Images/spaceImage4.jpg");
+  background-size: 100% 112%;
+  background-position: center 0%;
+  background-attachment: fixed;
+  filter: brightness(125%);
+  border-radius: 0%;
+}
+.pg2LgContainer .transition1 {
+  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
+}
+.pg2LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
+}
+
+.pg3LgContainer .lgContainerInit {
+  background-image: url("../images/003_Images/FlowerMod5.jpg");
+  background-size: 100% 159%;
+  background-attachment: fixed;
+  background-position: bottom;
+  filter: brightness(60%);
+  border-radius: 50%;
+}
+.pg3LgContainer .lgContainerFinal {
+  background-image: url("../images/003_Images/FlowerMod5.jpg");
+  background-size: 100% 159%;
+  background-attachment: fixed;
+  background-position: center right;
+  filter: brightness(100%);
+  border-radius: 0%;
+}
+.pg3LgContainer .transition1 {
+  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
+}
+.pg3LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
+}
+
+.pg4LgContainer .lgContainerInit {
+  background-image: url("../images/004_Images/NatureNew.jpg");
+  background-size: 1000% 1000%;
+  background-position: top left;
+  filter: contrast(1000%) brightness(75%) saturate(50%) hue-rotate(180deg) rotate(720deg);
+  background-attachment: fixed;
+  border-radius: 50%;
+}
+.pg4LgContainer .lgContainerFinal {
+  background-image: url("../images/004_Images/NatureNew.jpg");
+  background-size: 120% 191%;
+  background-position: bottom center;
+  filter: contrast(100%) brightness(100%) saturate(100%) hue-rotate(0deg) rotate(0deg);
+  background-attachment: fixed;
+  border-radius: 0%;
+}
+.pg4LgContainer .transition1 {
+  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
+}
+.pg4LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
+}
+
+.FeaturedImgPg4 {
+  background-image: url("004_Images/EarthMod1.jpg");
+  background-position: bottom;
+}
+
+/*##################################################*/
+/* 005.html: MY INTERESTS */
+/*##################################################*/
+.pg5LgContainer {
+  /* Class Selector: Outer Div containing Purpose text boxes */
+}
+.pg5LgContainer .lgContainerInit {
+  background-image: url("005-Images/books1Art6.jpg");
+  background-size: 1000% 1000%;
+  background-position: bottom;
+  filter: contrast(10000%) brightness(1000%);
+  border-radius: 50%;
+}
+.pg5LgContainer .lgContainerFinal {
+  background-image: url("005-Images/books1Art6.jpg");
+  background-size: 120% 191%;
+  background-position: center;
+  filter: contrast(1000%) brightness(1000%);
+  border-radius: 0%;
+}
+.pg5LgContainer .transition1 {
+  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
+}
+.pg5LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
+  /* custom */
+}
+
+/* 006.html: CONTACT ME */
+/*##################################################*/
+.pg6LgContainer {
+  /* Class Selector: Outer Div containing Purpose text boxes */
+}
+.pg6LgContainer .lgContainerInit {
+  background-image: url("../images/006-Images/ProfilePic1.jpg");
+  background-size: 4%;
+  background-position: top;
+  filter: contrast(100%) brightness(100%) saturate(100%) blur(10px);
+  border-radius: 100%;
+}
+.pg6LgContainer .lgContainerFinal {
+  background-image: url("../images/006-Images/ProfilePic1.jpg");
+  background-size: 20%;
+  background-position: center;
+  background-blend-mode: lighten;
+  background-attachment: fixed;
+  filter: contrast(100%) brightness(100%) saturate(100%) blur(0px);
+  border-radius: 0%;
+}
+.pg6LgContainer .transition1 {
+  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
+}
+.pg6LgContainer .transition2 {
+  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
+  /* custom */
 }
 
 .indexQuote {
@@ -832,13 +923,11 @@ a.Links:hover {
   width: 100%;
   padding: 0;
 }
-
 .TwoColSec .ColSide {
   background-color: white;
   height: auto;
   border-color: #eeeeee;
 }
-
 .TwoColSec .LeftColSide {
   white-space: normal;
   text-align: left;
@@ -849,7 +938,6 @@ a.Links:hover {
   line-height: 30px;
   transition: all 0ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
-
 .TwoColSec .RightColSide {
   white-space: normal;
   text-align: left;
@@ -868,15 +956,8 @@ a.Links:hover {
   background-size: cover;
   background-attachment: fixed;
   margin: 7% auto;
-  /* top/bottom right/left */
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
 }
-
-.FeaturedImgIndex {
-  background-image: url("../images/001_IndexImages/Abstract1Filt3.jpg");
-}
-
 .FeaturedTextDiv .FeatPgh {
   margin: 10% 25% 2% 10%;
   color: #00adb5;
@@ -886,19 +967,20 @@ a.Links:hover {
   background-color: white;
   padding: 1%;
   transition: all 500ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
   white-space: normal;
 }
-
 .FeaturedTextDiv .btn {
   font-size: 1.5rem;
   width: 30%;
   margin: 10% 25% 10% 10%;
   margin-top: 10px;
 }
-
 .FeaturedTextDiv .btn {
   color: #222831 !important;
+}
+
+.FeaturedImgIndex {
+  background-image: url("../images/001_IndexImages/Abstract1Filt3.jpg");
 }
 
 @media (max-width: 767px) {
@@ -928,13 +1010,9 @@ a.Links:hover {
   font-size: 1rem;
   /* (18px font-size / 2560px width */
   text-decoration: none;
-}
-
-.bottomDiv {
   text-align: right;
   color: #eeeeee;
 }
-
 .bottomDiv .col-sm-2 {
   color: #eeeeee;
 }
@@ -977,12 +1055,9 @@ a.Links:hover {
 }
 
 .myLogo_bottom {
-  /* Class Selector */
   color: #08d9d6;
   padding: 0;
-  /* top right bottom left */
   font-size: 2rem;
-  /* (50px font-size / 2560px width */
 }
 
 .middleLine_bottom {
@@ -1000,7 +1075,6 @@ a.Links:hover {
   }
 
   .myLogo_bottom {
-    /* Class Selector */
     font-size: 1.8rem;
   }
 
@@ -1011,53 +1085,12 @@ a.Links:hover {
 /*##################################################*/
 /* 002.html: MY RELEVANT EXPERIENCES */
 /*##################################################*/
-/*--------------------------------------------*/
-/* Large Image Container Div specific animation */
-/*--------------------------------------------*/
-.lgContainerDiv {
-  /* Class Selector: Outer Div containing Purpose text boxes */
-  margin: 100px auto;
-}
-
-.pg2LgContainer .lgContainerInit {
-  background-image: url("../images/002_Images/spaceImage4.jpg");
-  background-size: 100% 112%;
-  background-position: center bottom;
-  background-attachment: fixed;
-  filter: brightness(80%);
-  border-radius: 50%;
-}
-
-.pg2LgContainer .lgContainerFinal {
-  background-image: url("../images/002_Images/spaceImage4.jpg");
-  background-size: 100% 112%;
-  background-position: center 0%;
-  background-attachment: fixed;
-  filter: brightness(125%);
-  border-radius: 0%;
-}
-
-.pg2LgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg2LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
-}
-
-/*--------------------------------------------*/
-/* indexQuote parallax quote  */
-/*--------------------------------------------*/
 .pg2LgContainer .widthZero {
   max-width: 0;
 }
-
 .pg2LgContainer .widthFull {
   max-width: 50px;
 }
-
 .pg2LgContainer .boxQuote {
   display: inline-block;
   width: 44%;
@@ -1071,94 +1104,81 @@ a.Links:hover {
   z-index: 2;
   transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86), top 0ms ease-out;
 }
-
 .pg2LgContainer .boxQuote .card-title {
   font-size: 2rem;
   padding: 10px 25px;
 }
-
 .pg2LgContainer .boxQuote.displayQuote {
   max-height: 300px;
   border-radius: 0;
 }
-
 .pg2LgContainer .boxQuote.displayNone {
   max-height: 0;
   border-radius: 100%;
 }
-
 .pg2LgContainer .boxShadowExp {
-  box-shadow: 1px 1px #00adb5, 2px 2px #eeeeee, 3px 3px #00adb5, 4px 4px #eeeeee, 5px 5px #00adb5, 6px 6px #eeeeee, 7px 7px #00adb5, 8px 8px #eeeeee, 9px 9px #00adb5, 10px 10px #eeeeee, 11px 11px #00adb5, 12px 12px #eeeeee, 13px 13px #00adb5, 14px 14px #eeeeee, 15px 15px #00adb5, 16px 16px #eeeeee, 17px 17px #00adb5, 18px 18px #eeeeee, 19px 19px #00adb5, 20px 20px #eeeeee, 21px 21px #00adb5, 22px 22px #eeeeee, 23px 23px #00adb5, 24px 24px #eeeeee, 25px 25px #00adb5, 26px 26px #eeeeee, 27px 27px #00adb5, 28px 28px #eeeeee, 29px 29px #00adb5, 30px 30px #eeeeee, 31px 31px #00adb5, 32px 32px #eeeeee, 33px 33px #00adb5, 34px 34px #eeeeee, 35px 35px #00adb5, 36px 36px #eeeeee, 37px 37px #00adb5, 38px 38px #eeeeee, 39px 39px #00adb5;
+  box-shadow: 1px 1px #393e46, 2px 2px #eeeeee, 3px 3px #393e46, 4px 4px #eeeeee, 5px 5px #393e46, 6px 6px #eeeeee, 7px 7px #393e46, 8px 8px #eeeeee, 9px 9px #393e46, 10px 10px #eeeeee, 11px 11px #393e46, 12px 12px #eeeeee, 13px 13px #393e46, 14px 14px #eeeeee, 15px 15px #393e46, 16px 16px #eeeeee, 17px 17px #393e46, 18px 18px #eeeeee, 19px 19px #393e46, 20px 20px #eeeeee, 21px 21px #393e46, 22px 22px #eeeeee, 23px 23px #393e46, 24px 24px #eeeeee, 25px 25px #393e46, 26px 26px #eeeeee, 27px 27px #393e46, 28px 28px #eeeeee, 29px 29px #393e46, 30px 30px #eeeeee, 31px 31px #393e46, 32px 32px #eeeeee, 33px 33px #393e46, 34px 34px #eeeeee, 35px 35px #393e46, 36px 36px #eeeeee, 37px 37px #393e46, 38px 38px #eeeeee, 39px 39px #393e46, 40px 40px #eeeeee, 41px 41px #393e46, 42px 42px #eeeeee, 43px 43px #393e46, 44px 44px #eeeeee, 45px 45px #393e46, 46px 46px #eeeeee, 47px 47px #393e46, 48px 48px #eeeeee, 49px 49px #393e46, 50px 50px #eeeeee;
 }
-
 .pg2LgContainer .qtextShadowHover {
   color: crimson;
   text-shadow: 1px 1px #eeeeee, 2px 2px #eeeeee, 3px 3px #000000, 4px 4px #000000, 5px 5px #000000;
 }
-
 @media (min-width: 1441px) {
-  .pg2LgContainer .boxQuote .card-title {
-    font-size: 3.5rem;
-  }
-
   .pg2LgContainer .boxQuote {
     right: 5%;
     width: 35%;
   }
+  .pg2LgContainer .boxQuote .card-title {
+    font-size: 3.5rem;
+  }
 }
 @media (max-width: 1199px) {
-  .pg2LgContainer .boxQuote .card-title {
-    font-size: 2.25rem;
-  }
-
   .pg2LgContainer .boxQuote {
     right: 5%;
     width: 50%;
   }
+  .pg2LgContainer .boxQuote .card-title {
+    font-size: 2.25rem;
+  }
 }
 @media (max-width: 767px) {
-  .pg2LgContainer .boxQuote .card-title {
-    font-size: 2rem;
-  }
-
   .pg2LgContainer .boxQuote {
     right: 10%;
     width: 59%;
   }
-}
-@media (max-width: 575px) {
   .pg2LgContainer .boxQuote .card-title {
     font-size: 2rem;
   }
-
+}
+@media (max-width: 575px) {
   .pg2LgContainer .boxQuote {
     right: 10%;
     width: 75%;
   }
+  .pg2LgContainer .boxQuote .card-title {
+    font-size: 2rem;
+  }
 }
+
 /* FourBlock: 002.html */
 .FourBlock {
   text-align: left;
   margin-top: 100px;
-  margin-bottom: 150px;
+  margin-bottom: 100px;
   transition: all 1000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
   /* custom */
 }
-
 .FourBlock .container-fluid {
   margin: 100px auto;
   width: 100%;
 }
-
 @media (min-width: 1441px) {
   .FourBlock .col-md-6 {
-    padding: 25px 150px;
+    padding: 25px 100px;
   }
-
   .FourBlock .card-title {
     font-size: 5.375rem;
   }
-
   .FourBlock .card-text {
     font-size: 1.5rem;
   }
@@ -1167,11 +1187,9 @@ a.Links:hover {
   .FourBlock .col-md-6 {
     padding: 25px 100px;
   }
-
   .FourBlock .card-title {
     font-size: 3.375rem;
   }
-
   .FourBlock .card-text {
     font-size: 1.25rem;
   }
@@ -1180,11 +1198,9 @@ a.Links:hover {
   .FourBlock .col-md-6 {
     padding: 25px 75px;
   }
-
   .FourBlock .card-title {
     font-size: 5.375rem;
   }
-
   .FourBlock .card-text {
     font-size: 1rem;
   }
@@ -1193,11 +1209,9 @@ a.Links:hover {
   .FourBlock .col-md-6 {
     padding: 25px 50px;
   }
-
   .FourBlock .card-title {
     font-size: 4.375rem;
   }
-
   .FourBlock .card-text {
     font-size: 1rem;
   }
@@ -1206,15 +1220,14 @@ a.Links:hover {
   .FourBlock .col-md-6 {
     padding: 25px 40px;
   }
-
   .FourBlock .card-title {
     font-size: 3.375rem;
   }
-
   .FourBlock .card-text {
     font-size: 1rem;
   }
 }
+
 .FourBlockTrnstn {
   transition: all 1000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
   /* custom */
@@ -1223,46 +1236,6 @@ a.Links:hover {
 /*##################################################*/
 /* 003.html: MY EDUCATION & SKILLS */
 /*##################################################*/
-/*--------------------------------------------*/
-/* Large Image Container Div specific animation */
-/*--------------------------------------------*/
-.pg3LgContainer {
-  /* Class Selector: Outer Div containing Purpose text boxes */
-}
-
-.pg3LgContainer .container-fluid {
-  transition: all 6000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg3LgContainer .lgContainerInit {
-  background-image: url("../images/003_Images/FlowerMod5.jpg");
-  background-size: 100% 159%;
-  background-attachment: fixed;
-  background-position: bottom;
-  filter: brightness(60%);
-  border-radius: 50%;
-}
-
-.pg3LgContainer .lgContainerFinal {
-  background-image: url("../images/003_Images/FlowerMod5.jpg");
-  background-size: 100% 159%;
-  background-attachment: fixed;
-  background-position: center right;
-  filter: brightness(100%);
-  border-radius: 0%;
-}
-
-.pg3LgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg3LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
-}
-
 .FeaturedUsers {
   max-width: 100%;
   background-size: cover;
@@ -1291,7 +1264,6 @@ a.Links:hover {
   margin-top: 100px;
   font-size: 5.375rem;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
 }
 
 .FeatPghUsers {
@@ -1303,7 +1275,6 @@ a.Links:hover {
   background-color: white;
   padding: 1%;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
 }
 
 .FeaturedUsers .btn {
@@ -1312,7 +1283,6 @@ a.Links:hover {
   margin: auto;
   margin-top: 10px;
   transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  /* transition: all 0.75s ease-out; */
 }
 
 @media (max-width: 767px) {
@@ -1328,97 +1298,6 @@ a.Links:hover {
     font-size: 0.9rem;
   }
 }
-/*##################################################*/
-/* 004.html: MY DRIVE & PHILOSOPHY */
-/*##################################################*/
-/*--------------------------------------------*/
-/* Large Image Container Div specific animation */
-/*--------------------------------------------*/
-.pg4LgContainer {
-  /* Class Selector: Outer Div containing Purpose text boxes */
-}
-
-.pg4LgContainer .container-fluid {
-  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: all 6000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg4LgContainer .lgContainerInit {
-  background-image: url("../images/004_Images/NatureNew.jpg");
-  background-size: 1000% 1000%;
-  background-position: top left;
-  filter: contrast(1000%) brightness(75%) saturate(50%) hue-rotate(180deg) rotate(720deg);
-  background-attachment: fixed;
-  border-radius: 50%;
-}
-
-.pg4LgContainer .lgContainerFinal {
-  background-image: url("../images/004_Images/NatureNew1.jpg");
-  background-size: 120% 191%;
-  background-position: bottom center;
-  filter: contrast(100%) brightness(100%) saturate(100%) hue-rotate(0deg) rotate(0deg);
-  background-attachment: fixed;
-  border-radius: 0%;
-}
-
-.pg4LgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg4LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
-}
-
-/*--------------------------------------------*/
-/* Large Image Container Div specific animation */
-/*--------------------------------------------*/
-.FeaturedImgPg4 {
-  background-image: url("004_Images/EarthMod1.jpg");
-  background-position: bottom;
-}
-
-/*##################################################*/
-/* 005.html: MY INTERESTS */
-/*##################################################*/
-.pg5LgContainer {
-  /* Class Selector: Outer Div containing Purpose text boxes */
-}
-
-.pg5LgContainer .container-fluid {
-  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  transition: all 4000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg5LgContainer .lgContainerInit {
-  background-image: url("005-Images/books1Art6.jpg");
-  background-size: 1000% 1000%;
-  background-position: bottom;
-  filter: contrast(10000%) brightness(1000%);
-  border-radius: 50%;
-}
-
-.pg5LgContainer .lgContainerFinal {
-  background-image: url("005-Images/books1Art6.jpg");
-  background-size: 120% 191%;
-  background-position: center;
-  filter: contrast(1000%) brightness(1000%);
-  border-radius: 0%;
-}
-
-.pg5LgContainer .transition1 {
-  transition: all 3000ms cubic-bezier(0.21, 0.635, 0.47, 1.01);
-  /* custom */
-}
-
-.pg5LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.21, 0.635, 0.47, 1.01), background-size 0ms ease;
-  /* custom */
-}
-
 /*##################################################*/
 /* 006.html: CONTACT ME */
 /*##################################################*/

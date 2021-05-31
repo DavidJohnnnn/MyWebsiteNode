@@ -1,6 +1,30 @@
-/*##################################################*/
-/* Unique Div: RevealCard Div */
-/*##################################################*/
+//##################################################//
+// Unique Div: RevealCard Div //
+//##################################################//
+
+$sideWipeSpeed: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+$vertWipeSpeed: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+$generalCardSpeed: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+@mixin sideWipe {
+  height: 6px;
+  top: 0;
+  width: 25%;
+  position: absolute;
+  margin: 0;
+  background-color: $PrimaryColor;
+  overflow: hidden;
+  transition: $sideWipeSpeed;
+}
+@mixin vertLine {
+  background-color: $mainBlack;
+  position: relative;
+  height: 300px;
+  width: 10px;
+  top: 0;
+  margin: auto;
+  overflow: hidden;
+}
+
 
 .RevealCard {
   overflow-x: hidden;
@@ -11,31 +35,17 @@
     overflow: hidden;
   }
   .sideWipe1 {
-    height: 6px;
-    top: 0;
-    width: 25%;
-    position: absolute;
-    margin: 0;
-    background-color: $PrimaryColor;
-    overflow: hidden;
-    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+    @include sideWipe;
   }
   .sideWipe2 {
-    height: 6px;
-    bottom: 0;
-    width: 25%;
-    position: absolute;
-    margin: 0;
-    background-color: $PrimaryColor;
-    overflow: hidden;
-    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+    @include sideWipe;
   }
   .leftSideWipe {
     transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
     left: -27%;
   }
   .rightSideWipe {
-    transition: all 7000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+    transition: $sideWipeSpeed;
     left: 126%;
   }
   .vertWipe {
@@ -50,11 +60,11 @@
     top: -300px;
   }
   .downVertWipe {
-    transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+    transition: $vertWipeSpeed;
     top: 600px;
   }
   .upVertWipe1 {
-    transition: all 4000ms cubic-bezier(0.210, 0.635, 0.470, 1.010);
+    transition: $vertWipeSpeed;
     top: -300px;
   }
   .downVertWipe1 {
@@ -62,33 +72,21 @@
     top: 600px;
   }
   .verticalLine {
-    background-color: $mainBlack;
-    position: relative;
-    height: 300px;
-    width: 10px;
-    top: 0;
-    margin: auto;
-    overflow: hidden;
+    @include vertLine;
   }
   .verticalLine2 {
-    background-color: $mainBlack;
-    position: relative;
-    height: 300px;
-    width: 10px;
-    bottom: 0;
-    margin: auto;
-    overflow: hidden;
+    @include vertLine;
   }
 
   .container-fluid {
     margin: 9% auto;  // top/bottom right/left
     width: 60%;
-    transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+    transition: $generalCardSpeed;
 
     .card {
       border: 0;
       border-top: 10px solid $mainBlack;
-      transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+      transition: $generalCardSpeed;
     }
 
     .card-title {
@@ -100,7 +98,7 @@
       font-size: 9.375rem;
       font-weight: 100;
       text-shadow: 2px 2px $PrimaryColor;
-      transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+      transition: $generalCardSpeed;
     }
 
     .card.Text {
@@ -115,7 +113,7 @@
         font-size: 1rem;
         overflow: hidden;
         max-height: 10000px;
-        transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+        transition: $generalCardSpeed;
       }
       .fas.fa-plus.plusHide {
         max-height: 0;
@@ -137,7 +135,7 @@
         font-size: 1.45rem;
         overflow: hidden;
         text-align: left;
-        transition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+        transition: $generalCardSpeed;
 
         small {
           display: block;
@@ -157,66 +155,57 @@
       3px 3px $mainBlack,
       4px 4px $mainBlack;
   }
-
-}
-
-@media (max-width: 1199px) {
-  .RevealCard .container-fluid {
-    .card-title {
-      font-size: 8.375rem;
-    }
-    .card {
-      .fas.fa-plus {
-        font-size: 1rem;
+  .container {
+    @media (max-width: 1199px) {
+      .card-title {
+        font-size: 8.375rem;
       }
-      .card-text {
-        font-size: 1.35rem;
+      .card {
+        .fas.fa-plus {
+          font-size: 1rem;
+        }
+        .card-text {
+          font-size: 1.35rem;
+        }
       }
     }
-  }
-
-}
-@media (max-width: 991px) {
-  .RevealCard .container-fluid {
-    .card-title {
-      font-size: 7.375rem;
-    }
-    .card {
-      .fas.fa-plus {
-        font-size: 0.8rem;
+    @media (max-width: 991px) {
+      .card-title {
+        font-size: 7.375rem;
       }
-      .card-text {
-        font-size: 1.3rem;
+      .card {
+        .fas.fa-plus {
+          font-size: 0.8rem;
+        }
+        .card-text {
+          font-size: 1.3rem;
+        }
       }
     }
-  }
-}
-@media (max-width: 767px) {
-  .RevealCard .container-fluid {
-    .card-title {
-      font-size: 5.375rem;
-    }
-    .card {
-      .fas.fa-plus {
-        font-size: 0.65rem;
+    @media (max-width: 767px) {
+      .card-title {
+        font-size: 5.375rem;
       }
-      .card-text {
-        font-size: 1.2rem;
+      .card {
+        .fas.fa-plus {
+          font-size: 0.65rem;
+        }
+        .card-text {
+          font-size: 1.2rem;
+        }
       }
     }
-  }
-}
-@media (max-width: 575px) {
-  .RevealCard .container-fluid {
-    .card-title {
-      font-size: 4.375rem;
-    }
-    .card {
-      .fas.fa-plus {
-        font-size: 0.5rem;
+    @media (max-width: 575px) {
+      .card-title {
+        font-size: 4.375rem;
       }
-      .card-text {
-        font-size: 1.1rem;
+      .card {
+        .fas.fa-plus {
+          font-size: 0.5rem;
+        }
+        .card-text {
+          font-size: 1.1rem;
+        }
       }
     }
   }
