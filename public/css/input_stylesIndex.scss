@@ -481,6 +481,98 @@ $hoverFactor: 1.09;
 
 @import 'revealCard';
 
+// ################################################## //
+// Unique Div: bottomBox //
+//################################################## //
+
+.bottomBox {
+  margin-top: 100px;
+  vertical-align: bottom;
+  color: $mainWhite;
+}
+
+.bottomDiv {
+  padding: 3% 8%;  /* top/bottom left/right */
+  margin: 0;
+  height: auto;
+  background-color: $mainBlack;
+  font-size: 1rem;  /* (18px font-size / 2560px width */
+  text-decoration: none;
+  text-align: right;
+  color: $mainWhite;
+  .col-sm-2 {
+    color: $mainWhite;
+  }
+}
+
+.bottomLink {
+  color: $mainWhite;
+  text-decoration: none;
+  transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+/*
+.bottomLink:hover {
+  text-decoration: none;
+  color: $SecondaryColor;
+}
+
+.socialLink {
+  color: $mainWhite;
+  text-decoration: none;
+  padding: 8px;
+  border-style: none;
+  border-width: 0;
+  transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
+}
+
+.socialLink:hover {
+  text-decoration: none;
+  color: #08d9d6;
+  border-width: 1px;
+  border-radius: 100%;
+  border-style: solid;
+  border-color: #08d9d6;
+}
+*/
+
+.copyrightText {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  color: $mainWhite;
+  font-size: 1rem;
+  text-align: left;
+}
+
+.myLogo_bottom {  // Class Selector
+  color: #08d9d6;
+  padding: 0;  // top right bottom left
+  font-size: 2rem;
+}
+
+.middleLine_bottom {
+  color: $SecondaryColor;
+}
+
+.textAlter_bottom {
+  text-decoration: underline;
+  color: $mainWhite;
+}
+
+@media (max-width: 1023px) {
+  .bottomDiv {
+    font-size: 1.25rem;
+  }
+
+  .myLogo_bottom {  // Class Selector
+    font-size: 1.8rem;
+  }
+
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-6 {
+    padding-top: 10px;
+  }
+}
+
 
 /*##################################################*/
 /* Unique Div: Large Image Container Div (index.html) */
@@ -721,98 +813,6 @@ $hoverFactor: 1.09;
     font-size: 0.9rem;
   }
 }
-
-
-/*##################################################*/
-/* Unique Div: bottomBox */
-/*##################################################*/
-
-.bottomBox {
-  margin-top: 100px;
-  vertical-align: bottom;
-  color: $mainWhite;
-}
-
-.bottomDiv {
-  padding: 3% 8%;  /* top/bottom left/right */
-  margin: 0;
-  height: auto;
-  background-color: $mainBlack;
-  font-size: 1rem;  /* (18px font-size / 2560px width */
-  text-decoration: none;
-  text-align: right;
-  color: $mainWhite;
-  .col-sm-2 {
-    color: $mainWhite;
-  }
-}
-
-.bottomLink {
-  color: $mainWhite;
-  text-decoration: none;
-  transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.bottomLink:hover {
-  text-decoration: none;
-  color: $SecondaryColor;
-}
-
-.socialLink {
-  color: $mainWhite;
-  text-decoration: none;
-  padding: 8px;
-  border-style: none;
-  border-width: 0;
-  transition: all 500ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-}
-
-.socialLink:hover {
-  text-decoration: none;
-  color: #08d9d6;
-  border-width: 1px;
-  border-radius: 100%;
-  border-style: solid;
-  border-color: #08d9d6;
-}
-
-.copyrightText {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  color: $mainWhite;
-  font-size: 1rem;
-  text-align: left;
-}
-
-.myLogo_bottom {  // Class Selector
-  color: #08d9d6;
-  padding: 0;  // top right bottom left
-  font-size: 2rem;
-}
-
-.middleLine_bottom {
-  color: $SecondaryColor;
-}
-
-.textAlter_bottom {
-  text-decoration: underline;
-  color: $mainWhite;
-}
-
-@media (max-width: 1023px) {
-  .bottomDiv {
-    font-size: 1.25rem;
-  }
-
-  .myLogo_bottom {  // Class Selector
-    font-size: 1.8rem;
-  }
-
-  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-6 {
-    padding-top: 10px;
-  }
-}
-
 
 
 /*##################################################*/
@@ -1068,42 +1068,6 @@ $FeaturedUsersTransition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 /*##################################################*/
-/* 006.html: CONTACT ME */
-/*##################################################*/
-
-.pg6LgContainer {  /* Class Selector: Outer Div containing Purpose text boxes */
-}
-
-.pg6LgContainer .container-fluid {
-  transition: all 2000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
-  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-}
-
-.pg6LgContainer .lgContainerInit {
-  background-image: url('../images/006-Images/ProfilePic1.jpg');
-  background-size: 4%;
-  background-position: top;
-  filter: contrast(100%) brightness(100%) saturate(100%) blur(10px);
-  border-radius: 100%;
-}
-
-.pg6LgContainer .lgContainerFinal {
-  background-image: url('../images/006-Images/ProfilePic1.jpg');
-  background-size: 20%;
-  background-position: center;
-  background-blend-mode: lighten;
-  background-attachment: fixed;
-  filter: contrast(100%) brightness(100%) saturate(100%) blur(0px);
-  border-radius: 0%;
-}
-
-.pg6LgContainer .transition1 {
-  transition: all 8000ms cubic-bezier(0.210, 0.635, 0.470, 1.010); /* custom */
-} .pg6LgContainer .transition2 {
-  transition: all 0ms cubic-bezier(0.210, 0.635, 0.470, 1.010), background-size 0ms ease; /* custom */
-}
-
-/*##################################################*/
 /* Revealing Items classes */
 /*##################################################*/
 
@@ -1115,7 +1079,7 @@ $FeaturedUsersTransition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 .revealDiv {
-  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
+  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 
   max-width: 2560px;
   opacity: 100%;
@@ -1129,8 +1093,7 @@ $FeaturedUsersTransition: all 1000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
 }
 
 .Ichi.revealDiv {
-  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860); /* easeInOutCirc */
-
+  transition: transform 2500ms cubic-bezier(0.785, 0.135, 0.150, 0.860), opacity 3000ms cubic-bezier(0.785, 0.135, 0.150, 0.860);
   max-width: 2560px;
   opacity: 100%;
   transform: rotateY(0) rotateZ(0);
